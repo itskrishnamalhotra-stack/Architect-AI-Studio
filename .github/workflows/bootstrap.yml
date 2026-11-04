@@ -32,6 +32,8 @@ jobs:
           unzip -tq /tmp/architect_v41.zip >/dev/null
           unzip -q /tmp/architect_v41.zip -d /tmp/architect-publish
           cp -a /tmp/architect-publish/Architect_AI_Studio_V4_1/. ./
+          # The Actions token cannot add workflow files; publish that file through the connected GitHub app afterward.
+          mv .github/workflows/tests.yml /tmp/architect-tests-workflow.yml
           rm -rf .bootstrap .github/workflows/bootstrap.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
