@@ -25,6 +25,12 @@ jobs:
       - name: Run core tests and save results
         run: |
           python -m pytest tests/test_v3.py tests/test_v4.py -v --junitxml=test-results.xml
+      - name: Validate screenshots, PDFs, CAD files and documentation
+        run: |
+          python -m pip install "Pillow>=10,<13" "pypdf>=5,<7"
+          python scripts/verify_repo_assets.py
+      - name: Check JavaScript syntax
+        run: node --check static/v4.js
       - name: Upload test report
         if: always()
         uses: actions/upload-artifact@v4

@@ -8,7 +8,7 @@
 python -m pytest tests/test_v4.py tests/test_v3.py -v --durations=10 --junitxml=docs/test-results.xml
 ```
 
-The results are preserved as [JUnit XML](test-results.xml) (one entry for every executed case) and [machine-readable summary](verification-summary.json). **This is a real executed result**, not merely the presence of test files. The separate GitHub Actions workflow will run on Python 3.11 when the repo is published; that CI environment has **not yet been run**.
+The results are preserved as [JUnit XML](test-results.xml) (one entry for every executed case) and [machine-readable summary](verification-summary.json). **This is a real executed result**, not merely the presence of test files. The GitHub Actions workflow has now run successfully on Python 3.11; check its latest status for subsequent commits.
 
 ### Coverage
 
@@ -40,3 +40,14 @@ You may also use `python -m pytest tests/test_v4.py -q` for a shorter output. Gi
 - No new 3D renderer or complete editable CAD topology.
 - No independently verified live Gemini API call. The no-key error response is tested.
 - This test run covers Python logic/APIs; it is *not* a new full-browser E2E suite. The V4.1 interface screenshots and interaction checks were captured separately during the earlier UI redesign, as described in `UI_V4_1_AUDIT.md`.
+
+## Published-file integrity verification
+
+The CI workflow now additionally checks the actual repository files: decoding every PNG screenshot, parsing SVG/XML and JSON, auditing DXF files, opening the combined 92-page PDF, confirming all 35 case directories/indexes, and resolving local Markdown links. It also checks JavaScript syntax. This helps catch broken uploads and references; it does not replace live end-to-end browser tests or professional architectural review.
+
+Run locally after installing requirements plus `Pillow` and `pypdf`:
+
+```bash
+python -m pip install Pillow pypdf
+python scripts/verify_repo_assets.py
+```
