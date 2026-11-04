@@ -1,0 +1,44 @@
+name: Publish bundled V4.1 source
+on:
+  push:
+    paths:
+      - '.bootstrap/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  unpack-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Restore and verify source archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          parts=(.bootstrap/part_*)
+          if (( ${#parts[@]} != 15 )); then
+            echo "Expected 15 source archive parts, found ${#parts[@]}" >&2
+            exit 1
+          fi
+          for f in "${parts[@]}"; do
+            base64 --decode "$f" > "${f}.bin"
+          done
+          cat .bootstrap/part_*.bin > /tmp/architect_v41.zip
+          echo "dee3bd16ca74219fc37a2503375fed9e06322ba51a2f9a6f3817b9f1c113ef6e  /tmp/architect_v41.zip" | sha256sum -c -
+          unzip -tq /tmp/architect_v41.zip >/dev/null
+          unzip -q /tmp/architect_v41.zip -d /tmp/architect-publish
+          cp -a /tmp/architect-publish/Architect_AI_Studio_V4_1/. ./
+          rm -rf .bootstrap .github/workflows/bootstrap.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "feat: publish complete Architect AI Studio V4.1 application and showcase"
+            git push origin HEAD:main
+          fi
