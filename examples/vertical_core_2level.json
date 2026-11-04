@@ -1,0 +1,3559 @@
+{
+  "schema_version": "1.1.0",
+  "unit": "mm",
+  "origin": "top_left",
+  "x_positive": "right",
+  "y_positive": "down",
+  "project": {
+    "name": "Parametric 3-Bedroom Concept",
+    "description": "Reproducible planning stress-test; schematic only, no building-code approval",
+    "location": "",
+    "building_use": "residential",
+    "design_stage": "concept",
+    "author": "AI-assisted concept",
+    "revision": "V3",
+    "north_degrees_clockwise_from_page_up": 0.0
+  },
+  "materials": [],
+  "levels": [
+    {
+      "id": "L0",
+      "name": "Ground Floor",
+      "elevation_mm": 0.0,
+      "default_clear_height_mm": 3000.0,
+      "slab_thickness_mm": 150.0,
+      "footprint": [
+        {
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "x": 13200.0,
+          "y": 0.0
+        },
+        {
+          "x": 13200.0,
+          "y": 11600.0
+        },
+        {
+          "x": 0.0,
+          "y": 11600.0
+        }
+      ],
+      "footprint_holes": [],
+      "spaces": [
+        {
+          "id": "bedroom_1",
+          "name": "BEDROOM 1",
+          "kind": "bedroom",
+          "polygon": [
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": 4373.5,
+              "y": 0.0
+            },
+            {
+              "x": 4373.5,
+              "y": 4950.0
+            },
+            {
+              "x": 0.0,
+              "y": 4950.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "bedroom_2",
+          "name": "BEDROOM 2",
+          "kind": "bedroom",
+          "polygon": [
+            {
+              "x": 4373.5,
+              "y": 0.0
+            },
+            {
+              "x": 8763.0,
+              "y": 0.0
+            },
+            {
+              "x": 8763.0,
+              "y": 4950.0
+            },
+            {
+              "x": 4373.5,
+              "y": 4950.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "bedroom_3",
+          "name": "BEDROOM 3",
+          "kind": "bedroom",
+          "polygon": [
+            {
+              "x": 8763.0,
+              "y": 0.0
+            },
+            {
+              "x": 13200.0,
+              "y": 0.0
+            },
+            {
+              "x": 13200.0,
+              "y": 4950.0
+            },
+            {
+              "x": 8763.0,
+              "y": 4950.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "hall",
+          "name": "CENTRAL CORRIDOR",
+          "kind": "corridor",
+          "polygon": [
+            {
+              "x": 0.0,
+              "y": 4950.0
+            },
+            {
+              "x": 13200.0,
+              "y": 4950.0
+            },
+            {
+              "x": 13200.0,
+              "y": 6400.0
+            },
+            {
+              "x": 0.0,
+              "y": 6400.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "living",
+          "name": "LIVING / DINING",
+          "kind": "living",
+          "polygon": [
+            {
+              "x": 0.0,
+              "y": 6400.0
+            },
+            {
+              "x": 5100.0,
+              "y": 6400.0
+            },
+            {
+              "x": 5100.0,
+              "y": 11600.0
+            },
+            {
+              "x": 0.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "kitchen",
+          "name": "KITCHEN",
+          "kind": "kitchen",
+          "polygon": [
+            {
+              "x": 5100.0,
+              "y": 6400.0
+            },
+            {
+              "x": 8100.0,
+              "y": 6400.0
+            },
+            {
+              "x": 8100.0,
+              "y": 11600.0
+            },
+            {
+              "x": 5100.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "bath",
+          "name": "BATHROOM",
+          "kind": "bathroom",
+          "polygon": [
+            {
+              "x": 8100.0,
+              "y": 6400.0
+            },
+            {
+              "x": 9700.0,
+              "y": 6400.0
+            },
+            {
+              "x": 9700.0,
+              "y": 11600.0
+            },
+            {
+              "x": 8100.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "lift_lobby",
+          "name": "CORE LOBBY",
+          "kind": "lift_lobby",
+          "polygon": [
+            {
+              "x": 9700.0,
+              "y": 6400.0
+            },
+            {
+              "x": 10800.0,
+              "y": 6400.0
+            },
+            {
+              "x": 10800.0,
+              "y": 11600.0
+            },
+            {
+              "x": 9700.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "stairwell",
+          "name": "STAIRWELL",
+          "kind": "stairwell",
+          "polygon": [
+            {
+              "x": 10800.0,
+              "y": 6400.0
+            },
+            {
+              "x": 13200.0,
+              "y": 6400.0
+            },
+            {
+              "x": 13200.0,
+              "y": 9500.0
+            },
+            {
+              "x": 10800.0,
+              "y": 9500.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": false,
+          "tags": []
+        },
+        {
+          "id": "lift_shaft",
+          "name": "LIFT SHAFT",
+          "kind": "shaft",
+          "polygon": [
+            {
+              "x": 10800.0,
+              "y": 9500.0
+            },
+            {
+              "x": 12350.0,
+              "y": 9500.0
+            },
+            {
+              "x": 12350.0,
+              "y": 11600.0
+            },
+            {
+              "x": 10800.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": false,
+          "tags": []
+        },
+        {
+          "id": "shaft_space",
+          "name": "MEP SHAFT",
+          "kind": "shaft",
+          "polygon": [
+            {
+              "x": 12350.0,
+              "y": 9500.0
+            },
+            {
+              "x": 13200.0,
+              "y": 9500.0
+            },
+            {
+              "x": 13200.0,
+              "y": 11600.0
+            },
+            {
+              "x": 12350.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": false,
+          "tags": []
+        }
+      ],
+      "walls": [
+        {
+          "id": "W001",
+          "start": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 4373.5,
+            "y": 0.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W002",
+          "start": {
+            "x": 4373.5,
+            "y": 0.0
+          },
+          "end": {
+            "x": 4373.5,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W003",
+          "start": {
+            "x": 0.0,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 4373.5,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W004",
+          "start": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 0.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W005",
+          "start": {
+            "x": 4373.5,
+            "y": 0.0
+          },
+          "end": {
+            "x": 8763.0,
+            "y": 0.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W006",
+          "start": {
+            "x": 8763.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 8763.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W007",
+          "start": {
+            "x": 4373.5,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 8763.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W008",
+          "start": {
+            "x": 8763.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 0.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W009",
+          "start": {
+            "x": 13200.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W010",
+          "start": {
+            "x": 8763.0,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W011",
+          "start": {
+            "x": 13200.0,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W012",
+          "start": {
+            "x": 10800.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W013",
+          "start": {
+            "x": 9700.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 10800.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W014",
+          "start": {
+            "x": 8100.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 9700.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W015",
+          "start": {
+            "x": 5100.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 8100.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W016",
+          "start": {
+            "x": 0.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 5100.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W017",
+          "start": {
+            "x": 0.0,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 0.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W018",
+          "start": {
+            "x": 5100.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 5100.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W019",
+          "start": {
+            "x": 0.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 5100.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W020",
+          "start": {
+            "x": 0.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 0.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W021",
+          "start": {
+            "x": 8100.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 8100.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W022",
+          "start": {
+            "x": 5100.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 8100.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W023",
+          "start": {
+            "x": 9700.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 9700.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W024",
+          "start": {
+            "x": 8100.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 9700.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W025",
+          "start": {
+            "x": 10800.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 10800.0,
+            "y": 9500.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W026",
+          "start": {
+            "x": 10800.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 10800.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W027",
+          "start": {
+            "x": 9700.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 10800.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W028",
+          "start": {
+            "x": 13200.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 9500.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W029",
+          "start": {
+            "x": 12350.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 9500.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W030",
+          "start": {
+            "x": 10800.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 12350.0,
+            "y": 9500.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W031",
+          "start": {
+            "x": 12350.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 12350.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W032",
+          "start": {
+            "x": 10800.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 12350.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W033",
+          "start": {
+            "x": 13200.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W034",
+          "start": {
+            "x": 12350.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        }
+      ],
+      "openings": [
+        {
+          "id": "D_B1",
+          "host_wall_id": "W003",
+          "kind": "door",
+          "offset_mm": 1736.75,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "left",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_B2",
+          "host_wall_id": "W007",
+          "kind": "door",
+          "offset_mm": 1744.75,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "left",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_B3",
+          "host_wall_id": "W010",
+          "kind": "door",
+          "offset_mm": 1768.5,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "left",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_LIVING",
+          "host_wall_id": "W016",
+          "kind": "door",
+          "offset_mm": 2075.0,
+          "width_mm": 950.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_KITCHEN",
+          "host_wall_id": "W015",
+          "kind": "door",
+          "offset_mm": 1025.0,
+          "width_mm": 950.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_BATH",
+          "host_wall_id": "W014",
+          "kind": "door",
+          "offset_mm": 360.0,
+          "width_mm": 880.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_CORE",
+          "host_wall_id": "W013",
+          "kind": "door",
+          "offset_mm": 100.0,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_STAIR",
+          "host_wall_id": "W025",
+          "kind": "door",
+          "offset_mm": 130.0,
+          "width_mm": 920.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_LIFT",
+          "host_wall_id": "W026",
+          "kind": "sliding_door",
+          "offset_mm": 600.0,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_ENTRY",
+          "host_wall_id": "W019",
+          "kind": "door",
+          "offset_mm": 2227.5,
+          "width_mm": 1050.0,
+          "height_mm": 2200.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "left",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_B1",
+          "host_wall_id": "W004",
+          "kind": "window",
+          "offset_mm": 1850.0,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_B2",
+          "host_wall_id": "W005",
+          "kind": "window",
+          "offset_mm": 1569.75,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_B3",
+          "host_wall_id": "W009",
+          "kind": "window",
+          "offset_mm": 1850.0,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_LI_5",
+          "host_wall_id": "W020",
+          "kind": "window",
+          "offset_mm": 1975.0,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_KI_6",
+          "host_wall_id": "W022",
+          "kind": "window",
+          "offset_mm": 875.0,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        }
+      ],
+      "objects": [
+        {
+          "id": "bedroom_1_bed",
+          "name": "Double Bed",
+          "kind": "bed",
+          "center": {
+            "x": 3243.5,
+            "y": 1980.0
+          },
+          "width_mm": 1740.0,
+          "depth_mm": 1990.0,
+          "height_mm": 550.0,
+          "rotation_degrees": 90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {
+            "headboard_to_wall_target_mm": 135
+          },
+          "space_id": "bedroom_1",
+          "placement": "wall_anchored",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bedroom_1_wardrobe",
+          "name": "Wardrobe",
+          "kind": "wardrobe",
+          "center": {
+            "x": 1312.05,
+            "y": 415.0
+          },
+          "width_mm": 1450.0,
+          "depth_mm": 560.0,
+          "height_mm": 2400.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bedroom_1",
+          "placement": "wall_anchored",
+          "front_clearance_mm": 700.0
+        },
+        {
+          "id": "bedroom_2_bed",
+          "name": "Double Bed",
+          "kind": "bed",
+          "center": {
+            "x": 5503.5,
+            "y": 1980.0
+          },
+          "width_mm": 1740.0,
+          "depth_mm": 1990.0,
+          "height_mm": 550.0,
+          "rotation_degrees": -90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {
+            "headboard_to_wall_target_mm": 135
+          },
+          "space_id": "bedroom_2",
+          "placement": "wall_anchored",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bedroom_2_wardrobe",
+          "name": "Wardrobe",
+          "kind": "wardrobe",
+          "center": {
+            "x": 8348.0,
+            "y": 2475.0
+          },
+          "width_mm": 1450.0,
+          "depth_mm": 560.0,
+          "height_mm": 2400.0,
+          "rotation_degrees": 90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bedroom_2",
+          "placement": "wall_anchored",
+          "front_clearance_mm": 700.0
+        },
+        {
+          "id": "bedroom_3_bed",
+          "name": "Double Bed",
+          "kind": "bed",
+          "center": {
+            "x": 10981.5,
+            "y": 1130.0
+          },
+          "width_mm": 1740.0,
+          "depth_mm": 1990.0,
+          "height_mm": 550.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {
+            "headboard_to_wall_target_mm": 135
+          },
+          "space_id": "bedroom_3",
+          "placement": "wall_anchored",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bedroom_3_wardrobe",
+          "name": "Wardrobe",
+          "kind": "wardrobe",
+          "center": {
+            "x": 9178.0,
+            "y": 2475.0
+          },
+          "width_mm": 1450.0,
+          "depth_mm": 560.0,
+          "height_mm": 2400.0,
+          "rotation_degrees": -90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bedroom_3",
+          "placement": "wall_anchored",
+          "front_clearance_mm": 700.0
+        },
+        {
+          "id": "living_sofa",
+          "name": "Sofa",
+          "kind": "sofa",
+          "center": {
+            "x": 900.0,
+            "y": 7850.0
+          },
+          "width_mm": 1850.0,
+          "depth_mm": 800.0,
+          "height_mm": 850.0,
+          "rotation_degrees": -90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "dining_table",
+          "name": "Dining Table",
+          "kind": "table",
+          "center": {
+            "x": 1950.0,
+            "y": 9630.0
+          },
+          "width_mm": 1350.0,
+          "depth_mm": 850.0,
+          "height_mm": 750.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "kitchen_counter",
+          "name": "Kitchen Counter",
+          "kind": "counter",
+          "center": {
+            "x": 5520.0,
+            "y": 7600.0
+          },
+          "width_mm": 580.0,
+          "depth_mm": 1900.0,
+          "height_mm": 910.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "kitchen",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "kitchen_sink",
+          "name": "Kitchen Sink",
+          "kind": "sink",
+          "center": {
+            "x": 5520.0,
+            "y": 7350.0
+          },
+          "width_mm": 410.0,
+          "depth_mm": 450.0,
+          "height_mm": 230.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "kitchen",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "kitchen_hob",
+          "name": "Hob",
+          "kind": "hob",
+          "center": {
+            "x": 5520.0,
+            "y": 7970.0
+          },
+          "width_mm": 400.0,
+          "depth_mm": 420.0,
+          "height_mm": 160.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "kitchen",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bath_wc",
+          "name": "WC",
+          "kind": "wc",
+          "center": {
+            "x": 9150.0,
+            "y": 10850.0
+          },
+          "width_mm": 510.0,
+          "depth_mm": 680.0,
+          "height_mm": 750.0,
+          "rotation_degrees": 180.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bath",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bath_basin",
+          "name": "Wash Basin",
+          "kind": "sink",
+          "center": {
+            "x": 8440.0,
+            "y": 10980.0
+          },
+          "width_mm": 500.0,
+          "depth_mm": 400.0,
+          "height_mm": 220.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bath",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bath_shower",
+          "name": "Shower",
+          "kind": "shower",
+          "center": {
+            "x": 8700.0,
+            "y": 8250.0
+          },
+          "width_mm": 1000.0,
+          "depth_mm": 1000.0,
+          "height_mm": 2100.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bath",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "chair_dining_left",
+          "name": "Dining Chair",
+          "kind": "chair",
+          "center": {
+            "x": 920.0,
+            "y": 9630.0
+          },
+          "width_mm": 500.0,
+          "depth_mm": 500.0,
+          "height_mm": 850.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "chair_dining_right",
+          "name": "Dining Chair",
+          "kind": "chair",
+          "center": {
+            "x": 2980.0,
+            "y": 9630.0
+          },
+          "width_mm": 500.0,
+          "depth_mm": 500.0,
+          "height_mm": 850.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "living_tv_unit",
+          "name": "TV Console",
+          "kind": "cabinet",
+          "center": {
+            "x": 4825.0,
+            "y": 7850.0
+          },
+          "width_mm": 1230.0,
+          "depth_mm": 340.0,
+          "height_mm": 690.0,
+          "rotation_degrees": 90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "wall_anchored",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "kitchen_lower_cabinets",
+          "name": "Lower Cabinets",
+          "kind": "counter",
+          "center": {
+            "x": 6870.0,
+            "y": 11165.0
+          },
+          "width_mm": 1410.0,
+          "depth_mm": 550.0,
+          "height_mm": 850.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "kitchen",
+          "placement": "built_in",
+          "front_clearance_mm": null
+        }
+      ],
+      "built_elements": [
+        {
+          "id": "MEP_01",
+          "name": "Vertical MEP Shaft",
+          "kind": "shaft",
+          "polygon": [
+            {
+              "x": 12500.0,
+              "y": 9650.0
+            },
+            {
+              "x": 13050.0,
+              "y": 9650.0
+            },
+            {
+              "x": 13050.0,
+              "y": 11450.0
+            },
+            {
+              "x": 12500.0,
+              "y": 11450.0
+            }
+          ],
+          "base_z_mm": 0.0,
+          "height_mm": 3000.0,
+          "material_id": null,
+          "load_bearing_assumed": false,
+          "attributes": {}
+        },
+        {
+          "id": "COL_01",
+          "name": "250mm RC Column (intent only)",
+          "kind": "column",
+          "polygon": [
+            {
+              "x": 240.0,
+              "y": 6640.0
+            },
+            {
+              "x": 490.0,
+              "y": 6640.0
+            },
+            {
+              "x": 490.0,
+              "y": 6890.0
+            },
+            {
+              "x": 240.0,
+              "y": 6890.0
+            }
+          ],
+          "base_z_mm": 0.0,
+          "height_mm": 3000.0,
+          "material_id": null,
+          "load_bearing_assumed": true,
+          "attributes": {}
+        }
+      ],
+      "vertical_connectors": [
+        {
+          "id": "STAIR_01",
+          "name": "Double-flight Stair",
+          "kind": "stair",
+          "polygon": [
+            {
+              "x": 10940.0,
+              "y": 6510.0
+            },
+            {
+              "x": 13060.0,
+              "y": 6510.0
+            },
+            {
+              "x": 13060.0,
+              "y": 9360.0
+            },
+            {
+              "x": 10940.0,
+              "y": 9360.0
+            }
+          ],
+          "serves_level_ids": [
+            "L0",
+            "L1"
+          ],
+          "orientation_degrees": 0.0,
+          "step_count": 18,
+          "rise_mm": 175.0,
+          "going_mm": 250.0,
+          "landings": [
+            [
+              {
+                "x": 11000.0,
+                "y": 6540.0
+              },
+              {
+                "x": 13000.0,
+                "y": 6540.0
+              },
+              {
+                "x": 13000.0,
+                "y": 7450.0
+              },
+              {
+                "x": 11000.0,
+                "y": 7450.0
+              }
+            ],
+            [
+              {
+                "x": 11000.0,
+                "y": 8550.0
+              },
+              {
+                "x": 13000.0,
+                "y": 8550.0
+              },
+              {
+                "x": 13000.0,
+                "y": 9280.0
+              },
+              {
+                "x": 11000.0,
+                "y": 9280.0
+              }
+            ]
+          ],
+          "cabin_width_mm": null,
+          "cabin_depth_mm": null,
+          "door_opening_id": null,
+          "attributes": {}
+        },
+        {
+          "id": "LIFT_01",
+          "name": "Passenger Lift",
+          "kind": "lift",
+          "polygon": [
+            {
+              "x": 10890.0,
+              "y": 9600.0
+            },
+            {
+              "x": 12260.0,
+              "y": 9600.0
+            },
+            {
+              "x": 12260.0,
+              "y": 11500.0
+            },
+            {
+              "x": 10890.0,
+              "y": 11500.0
+            }
+          ],
+          "serves_level_ids": [
+            "L0",
+            "L1"
+          ],
+          "orientation_degrees": 0.0,
+          "step_count": null,
+          "rise_mm": null,
+          "going_mm": null,
+          "landings": [],
+          "cabin_width_mm": 1250.0,
+          "cabin_depth_mm": 1780.0,
+          "door_opening_id": "D_LIFT",
+          "attributes": {}
+        }
+      ],
+      "annotations": [],
+      "dimensions": []
+    },
+    {
+      "id": "L1",
+      "name": "Floor 2",
+      "elevation_mm": 3150.0,
+      "default_clear_height_mm": 3000.0,
+      "slab_thickness_mm": 150.0,
+      "footprint": [
+        {
+          "x": 0.0,
+          "y": 0.0
+        },
+        {
+          "x": 13200.0,
+          "y": 0.0
+        },
+        {
+          "x": 13200.0,
+          "y": 11600.0
+        },
+        {
+          "x": 0.0,
+          "y": 11600.0
+        }
+      ],
+      "footprint_holes": [],
+      "spaces": [
+        {
+          "id": "bedroom_1",
+          "name": "BEDROOM 1",
+          "kind": "bedroom",
+          "polygon": [
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": 4373.5,
+              "y": 0.0
+            },
+            {
+              "x": 4373.5,
+              "y": 4950.0
+            },
+            {
+              "x": 0.0,
+              "y": 4950.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "bedroom_2",
+          "name": "BEDROOM 2",
+          "kind": "bedroom",
+          "polygon": [
+            {
+              "x": 4373.5,
+              "y": 0.0
+            },
+            {
+              "x": 8763.0,
+              "y": 0.0
+            },
+            {
+              "x": 8763.0,
+              "y": 4950.0
+            },
+            {
+              "x": 4373.5,
+              "y": 4950.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "bedroom_3",
+          "name": "BEDROOM 3",
+          "kind": "bedroom",
+          "polygon": [
+            {
+              "x": 8763.0,
+              "y": 0.0
+            },
+            {
+              "x": 13200.0,
+              "y": 0.0
+            },
+            {
+              "x": 13200.0,
+              "y": 4950.0
+            },
+            {
+              "x": 8763.0,
+              "y": 4950.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "hall",
+          "name": "CENTRAL CORRIDOR",
+          "kind": "corridor",
+          "polygon": [
+            {
+              "x": 0.0,
+              "y": 4950.0
+            },
+            {
+              "x": 13200.0,
+              "y": 4950.0
+            },
+            {
+              "x": 13200.0,
+              "y": 6400.0
+            },
+            {
+              "x": 0.0,
+              "y": 6400.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "living",
+          "name": "LIVING / DINING",
+          "kind": "living",
+          "polygon": [
+            {
+              "x": 0.0,
+              "y": 6400.0
+            },
+            {
+              "x": 5100.0,
+              "y": 6400.0
+            },
+            {
+              "x": 5100.0,
+              "y": 11600.0
+            },
+            {
+              "x": 0.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "kitchen",
+          "name": "KITCHEN",
+          "kind": "kitchen",
+          "polygon": [
+            {
+              "x": 5100.0,
+              "y": 6400.0
+            },
+            {
+              "x": 8100.0,
+              "y": 6400.0
+            },
+            {
+              "x": 8100.0,
+              "y": 11600.0
+            },
+            {
+              "x": 5100.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "bath",
+          "name": "BATHROOM",
+          "kind": "bathroom",
+          "polygon": [
+            {
+              "x": 8100.0,
+              "y": 6400.0
+            },
+            {
+              "x": 9700.0,
+              "y": 6400.0
+            },
+            {
+              "x": 9700.0,
+              "y": 11600.0
+            },
+            {
+              "x": 8100.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "lift_lobby",
+          "name": "CORE LOBBY",
+          "kind": "lift_lobby",
+          "polygon": [
+            {
+              "x": 9700.0,
+              "y": 6400.0
+            },
+            {
+              "x": 10800.0,
+              "y": 6400.0
+            },
+            {
+              "x": 10800.0,
+              "y": 11600.0
+            },
+            {
+              "x": 9700.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": true,
+          "tags": []
+        },
+        {
+          "id": "stairwell",
+          "name": "STAIRWELL",
+          "kind": "stairwell",
+          "polygon": [
+            {
+              "x": 10800.0,
+              "y": 6400.0
+            },
+            {
+              "x": 13200.0,
+              "y": 6400.0
+            },
+            {
+              "x": 13200.0,
+              "y": 9500.0
+            },
+            {
+              "x": 10800.0,
+              "y": 9500.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": false,
+          "tags": []
+        },
+        {
+          "id": "lift_shaft",
+          "name": "LIFT SHAFT",
+          "kind": "shaft",
+          "polygon": [
+            {
+              "x": 10800.0,
+              "y": 9500.0
+            },
+            {
+              "x": 12350.0,
+              "y": 9500.0
+            },
+            {
+              "x": 12350.0,
+              "y": 11600.0
+            },
+            {
+              "x": 10800.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": false,
+          "tags": []
+        },
+        {
+          "id": "shaft_space",
+          "name": "MEP SHAFT",
+          "kind": "shaft",
+          "polygon": [
+            {
+              "x": 12350.0,
+              "y": 9500.0
+            },
+            {
+              "x": 13200.0,
+              "y": 9500.0
+            },
+            {
+              "x": 13200.0,
+              "y": 11600.0
+            },
+            {
+              "x": 12350.0,
+              "y": 11600.0
+            }
+          ],
+          "holes": [],
+          "floor_material_id": null,
+          "wall_finish_id": null,
+          "ceiling_material_id": null,
+          "ceiling_height_mm": null,
+          "occupancy": null,
+          "is_habitable": false,
+          "tags": []
+        }
+      ],
+      "walls": [
+        {
+          "id": "W001",
+          "start": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 4373.5,
+            "y": 0.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W002",
+          "start": {
+            "x": 4373.5,
+            "y": 0.0
+          },
+          "end": {
+            "x": 4373.5,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W003",
+          "start": {
+            "x": 0.0,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 4373.5,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W004",
+          "start": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 0.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W005",
+          "start": {
+            "x": 4373.5,
+            "y": 0.0
+          },
+          "end": {
+            "x": 8763.0,
+            "y": 0.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W006",
+          "start": {
+            "x": 8763.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 8763.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W007",
+          "start": {
+            "x": 4373.5,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 8763.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W008",
+          "start": {
+            "x": 8763.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 0.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W009",
+          "start": {
+            "x": 13200.0,
+            "y": 0.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W010",
+          "start": {
+            "x": 8763.0,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 4950.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W011",
+          "start": {
+            "x": 13200.0,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W012",
+          "start": {
+            "x": 10800.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W013",
+          "start": {
+            "x": 9700.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 10800.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W014",
+          "start": {
+            "x": 8100.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 9700.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W015",
+          "start": {
+            "x": 5100.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 8100.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W016",
+          "start": {
+            "x": 0.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 5100.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W017",
+          "start": {
+            "x": 0.0,
+            "y": 4950.0
+          },
+          "end": {
+            "x": 0.0,
+            "y": 6400.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W018",
+          "start": {
+            "x": 5100.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 5100.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W019",
+          "start": {
+            "x": 0.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 5100.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W020",
+          "start": {
+            "x": 0.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 0.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W021",
+          "start": {
+            "x": 8100.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 8100.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W022",
+          "start": {
+            "x": 5100.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 8100.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W023",
+          "start": {
+            "x": 9700.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 9700.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W024",
+          "start": {
+            "x": 8100.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 9700.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W025",
+          "start": {
+            "x": 10800.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 10800.0,
+            "y": 9500.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W026",
+          "start": {
+            "x": 10800.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 10800.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W027",
+          "start": {
+            "x": 9700.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 10800.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W028",
+          "start": {
+            "x": 13200.0,
+            "y": 6400.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 9500.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W029",
+          "start": {
+            "x": 12350.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 9500.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W030",
+          "start": {
+            "x": 10800.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 12350.0,
+            "y": 9500.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W031",
+          "start": {
+            "x": 12350.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 12350.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 120.0,
+          "height_mm": 3000.0,
+          "kind": "interior",
+          "structural": false,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W032",
+          "start": {
+            "x": 10800.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 12350.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W033",
+          "start": {
+            "x": 13200.0,
+            "y": 9500.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        },
+        {
+          "id": "W034",
+          "start": {
+            "x": 12350.0,
+            "y": 11600.0
+          },
+          "end": {
+            "x": 13200.0,
+            "y": 11600.0
+          },
+          "thickness_mm": 230.0,
+          "height_mm": 3000.0,
+          "kind": "exterior",
+          "structural": true,
+          "material_id": null,
+          "base_z_mm": 0.0,
+          "fire_rating_min": null
+        }
+      ],
+      "openings": [
+        {
+          "id": "D_B1",
+          "host_wall_id": "W003",
+          "kind": "door",
+          "offset_mm": 1736.75,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "left",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_B2",
+          "host_wall_id": "W007",
+          "kind": "door",
+          "offset_mm": 1744.75,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "left",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_B3",
+          "host_wall_id": "W010",
+          "kind": "door",
+          "offset_mm": 1768.5,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "left",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_LIVING",
+          "host_wall_id": "W016",
+          "kind": "door",
+          "offset_mm": 2075.0,
+          "width_mm": 950.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_KITCHEN",
+          "host_wall_id": "W015",
+          "kind": "door",
+          "offset_mm": 1025.0,
+          "width_mm": 950.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_BATH",
+          "host_wall_id": "W014",
+          "kind": "door",
+          "offset_mm": 360.0,
+          "width_mm": 880.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_CORE",
+          "host_wall_id": "W013",
+          "kind": "door",
+          "offset_mm": 100.0,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_STAIR",
+          "host_wall_id": "W025",
+          "kind": "door",
+          "offset_mm": 130.0,
+          "width_mm": 920.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "right",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_LIFT",
+          "host_wall_id": "W026",
+          "kind": "sliding_door",
+          "offset_mm": 600.0,
+          "width_mm": 900.0,
+          "height_mm": 2100.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "D_ENTRY",
+          "host_wall_id": "W019",
+          "kind": "door",
+          "offset_mm": 2227.5,
+          "width_mm": 1050.0,
+          "height_mm": 2200.0,
+          "sill_mm": 0.0,
+          "hinge": "start",
+          "swing": "left",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_B1",
+          "host_wall_id": "W004",
+          "kind": "window",
+          "offset_mm": 1850.0,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_B2",
+          "host_wall_id": "W005",
+          "kind": "window",
+          "offset_mm": 1569.75,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_B3",
+          "host_wall_id": "W009",
+          "kind": "window",
+          "offset_mm": 1850.0,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_LI_5",
+          "host_wall_id": "W020",
+          "kind": "window",
+          "offset_mm": 1975.0,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        },
+        {
+          "id": "WN_KI_6",
+          "host_wall_id": "W022",
+          "kind": "window",
+          "offset_mm": 875.0,
+          "width_mm": 1250.0,
+          "height_mm": 1300.0,
+          "sill_mm": 900.0,
+          "hinge": "none",
+          "swing": "none",
+          "frame_material_id": null,
+          "glazing_material_id": null,
+          "fire_rating_min": null,
+          "accessible": null
+        }
+      ],
+      "objects": [
+        {
+          "id": "bedroom_1_bed",
+          "name": "Double Bed",
+          "kind": "bed",
+          "center": {
+            "x": 3243.5,
+            "y": 1980.0
+          },
+          "width_mm": 1740.0,
+          "depth_mm": 1990.0,
+          "height_mm": 550.0,
+          "rotation_degrees": 90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {
+            "headboard_to_wall_target_mm": 135
+          },
+          "space_id": "bedroom_1",
+          "placement": "wall_anchored",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bedroom_1_wardrobe",
+          "name": "Wardrobe",
+          "kind": "wardrobe",
+          "center": {
+            "x": 1312.05,
+            "y": 415.0
+          },
+          "width_mm": 1450.0,
+          "depth_mm": 560.0,
+          "height_mm": 2400.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bedroom_1",
+          "placement": "wall_anchored",
+          "front_clearance_mm": 700.0
+        },
+        {
+          "id": "bedroom_2_bed",
+          "name": "Double Bed",
+          "kind": "bed",
+          "center": {
+            "x": 5503.5,
+            "y": 1980.0
+          },
+          "width_mm": 1740.0,
+          "depth_mm": 1990.0,
+          "height_mm": 550.0,
+          "rotation_degrees": -90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {
+            "headboard_to_wall_target_mm": 135
+          },
+          "space_id": "bedroom_2",
+          "placement": "wall_anchored",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bedroom_2_wardrobe",
+          "name": "Wardrobe",
+          "kind": "wardrobe",
+          "center": {
+            "x": 8348.0,
+            "y": 2475.0
+          },
+          "width_mm": 1450.0,
+          "depth_mm": 560.0,
+          "height_mm": 2400.0,
+          "rotation_degrees": 90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bedroom_2",
+          "placement": "wall_anchored",
+          "front_clearance_mm": 700.0
+        },
+        {
+          "id": "bedroom_3_bed",
+          "name": "Double Bed",
+          "kind": "bed",
+          "center": {
+            "x": 10981.5,
+            "y": 1130.0
+          },
+          "width_mm": 1740.0,
+          "depth_mm": 1990.0,
+          "height_mm": 550.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {
+            "headboard_to_wall_target_mm": 135
+          },
+          "space_id": "bedroom_3",
+          "placement": "wall_anchored",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bedroom_3_wardrobe",
+          "name": "Wardrobe",
+          "kind": "wardrobe",
+          "center": {
+            "x": 9178.0,
+            "y": 2475.0
+          },
+          "width_mm": 1450.0,
+          "depth_mm": 560.0,
+          "height_mm": 2400.0,
+          "rotation_degrees": -90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bedroom_3",
+          "placement": "wall_anchored",
+          "front_clearance_mm": 700.0
+        },
+        {
+          "id": "living_sofa",
+          "name": "Sofa",
+          "kind": "sofa",
+          "center": {
+            "x": 900.0,
+            "y": 7850.0
+          },
+          "width_mm": 1850.0,
+          "depth_mm": 800.0,
+          "height_mm": 850.0,
+          "rotation_degrees": -90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "dining_table",
+          "name": "Dining Table",
+          "kind": "table",
+          "center": {
+            "x": 1950.0,
+            "y": 9630.0
+          },
+          "width_mm": 1350.0,
+          "depth_mm": 850.0,
+          "height_mm": 750.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "kitchen_counter",
+          "name": "Kitchen Counter",
+          "kind": "counter",
+          "center": {
+            "x": 5520.0,
+            "y": 7600.0
+          },
+          "width_mm": 580.0,
+          "depth_mm": 1900.0,
+          "height_mm": 910.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "kitchen",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "kitchen_sink",
+          "name": "Kitchen Sink",
+          "kind": "sink",
+          "center": {
+            "x": 5520.0,
+            "y": 7350.0
+          },
+          "width_mm": 410.0,
+          "depth_mm": 450.0,
+          "height_mm": 230.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "kitchen",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "kitchen_hob",
+          "name": "Hob",
+          "kind": "hob",
+          "center": {
+            "x": 5520.0,
+            "y": 7970.0
+          },
+          "width_mm": 400.0,
+          "depth_mm": 420.0,
+          "height_mm": 160.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "kitchen",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bath_wc",
+          "name": "WC",
+          "kind": "wc",
+          "center": {
+            "x": 9150.0,
+            "y": 10850.0
+          },
+          "width_mm": 510.0,
+          "depth_mm": 680.0,
+          "height_mm": 750.0,
+          "rotation_degrees": 180.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bath",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bath_basin",
+          "name": "Wash Basin",
+          "kind": "sink",
+          "center": {
+            "x": 8440.0,
+            "y": 10980.0
+          },
+          "width_mm": 500.0,
+          "depth_mm": 400.0,
+          "height_mm": 220.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bath",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "bath_shower",
+          "name": "Shower",
+          "kind": "shower",
+          "center": {
+            "x": 8700.0,
+            "y": 8250.0
+          },
+          "width_mm": 1000.0,
+          "depth_mm": 1000.0,
+          "height_mm": 2100.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "bath",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "chair_dining_left",
+          "name": "Dining Chair",
+          "kind": "chair",
+          "center": {
+            "x": 920.0,
+            "y": 9630.0
+          },
+          "width_mm": 500.0,
+          "depth_mm": 500.0,
+          "height_mm": 850.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "chair_dining_right",
+          "name": "Dining Chair",
+          "kind": "chair",
+          "center": {
+            "x": 2980.0,
+            "y": 9630.0
+          },
+          "width_mm": 500.0,
+          "depth_mm": 500.0,
+          "height_mm": 850.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "freestanding",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "living_tv_unit",
+          "name": "TV Console",
+          "kind": "cabinet",
+          "center": {
+            "x": 4825.0,
+            "y": 7850.0
+          },
+          "width_mm": 1230.0,
+          "depth_mm": 340.0,
+          "height_mm": 690.0,
+          "rotation_degrees": 90.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "living",
+          "placement": "wall_anchored",
+          "front_clearance_mm": null
+        },
+        {
+          "id": "kitchen_lower_cabinets",
+          "name": "Lower Cabinets",
+          "kind": "counter",
+          "center": {
+            "x": 6870.0,
+            "y": 11165.0
+          },
+          "width_mm": 1410.0,
+          "depth_mm": 550.0,
+          "height_mm": 850.0,
+          "rotation_degrees": 0.0,
+          "base_z_mm": 0.0,
+          "material_id": null,
+          "asset_uri": null,
+          "texture_uri": null,
+          "attributes": {},
+          "space_id": "kitchen",
+          "placement": "built_in",
+          "front_clearance_mm": null
+        }
+      ],
+      "built_elements": [
+        {
+          "id": "MEP_01",
+          "name": "Vertical MEP Shaft",
+          "kind": "shaft",
+          "polygon": [
+            {
+              "x": 12500.0,
+              "y": 9650.0
+            },
+            {
+              "x": 13050.0,
+              "y": 9650.0
+            },
+            {
+              "x": 13050.0,
+              "y": 11450.0
+            },
+            {
+              "x": 12500.0,
+              "y": 11450.0
+            }
+          ],
+          "base_z_mm": 0.0,
+          "height_mm": 3000.0,
+          "material_id": null,
+          "load_bearing_assumed": false,
+          "attributes": {}
+        },
+        {
+          "id": "COL_01",
+          "name": "250mm RC Column (intent only)",
+          "kind": "column",
+          "polygon": [
+            {
+              "x": 240.0,
+              "y": 6640.0
+            },
+            {
+              "x": 490.0,
+              "y": 6640.0
+            },
+            {
+              "x": 490.0,
+              "y": 6890.0
+            },
+            {
+              "x": 240.0,
+              "y": 6890.0
+            }
+          ],
+          "base_z_mm": 0.0,
+          "height_mm": 3000.0,
+          "material_id": null,
+          "load_bearing_assumed": true,
+          "attributes": {}
+        }
+      ],
+      "vertical_connectors": [
+        {
+          "id": "STAIR_01",
+          "name": "Double-flight Stair",
+          "kind": "stair",
+          "polygon": [
+            {
+              "x": 10940.0,
+              "y": 6510.0
+            },
+            {
+              "x": 13060.0,
+              "y": 6510.0
+            },
+            {
+              "x": 13060.0,
+              "y": 9360.0
+            },
+            {
+              "x": 10940.0,
+              "y": 9360.0
+            }
+          ],
+          "serves_level_ids": [
+            "L0",
+            "L1"
+          ],
+          "orientation_degrees": 0.0,
+          "step_count": 18,
+          "rise_mm": 175.0,
+          "going_mm": 250.0,
+          "landings": [
+            [
+              {
+                "x": 11000.0,
+                "y": 6540.0
+              },
+              {
+                "x": 13000.0,
+                "y": 6540.0
+              },
+              {
+                "x": 13000.0,
+                "y": 7450.0
+              },
+              {
+                "x": 11000.0,
+                "y": 7450.0
+              }
+            ],
+            [
+              {
+                "x": 11000.0,
+                "y": 8550.0
+              },
+              {
+                "x": 13000.0,
+                "y": 8550.0
+              },
+              {
+                "x": 13000.0,
+                "y": 9280.0
+              },
+              {
+                "x": 11000.0,
+                "y": 9280.0
+              }
+            ]
+          ],
+          "cabin_width_mm": null,
+          "cabin_depth_mm": null,
+          "door_opening_id": null,
+          "attributes": {}
+        },
+        {
+          "id": "LIFT_01",
+          "name": "Passenger Lift",
+          "kind": "lift",
+          "polygon": [
+            {
+              "x": 10890.0,
+              "y": 9600.0
+            },
+            {
+              "x": 12260.0,
+              "y": 9600.0
+            },
+            {
+              "x": 12260.0,
+              "y": 11500.0
+            },
+            {
+              "x": 10890.0,
+              "y": 11500.0
+            }
+          ],
+          "serves_level_ids": [
+            "L0",
+            "L1"
+          ],
+          "orientation_degrees": 0.0,
+          "step_count": null,
+          "rise_mm": null,
+          "going_mm": null,
+          "landings": [],
+          "cabin_width_mm": 1250.0,
+          "cabin_depth_mm": 1780.0,
+          "door_opening_id": "D_LIFT",
+          "attributes": {}
+        }
+      ],
+      "annotations": [],
+      "dimensions": []
+    }
+  ],
+  "assumptions": [
+    "Example concept dimensions, not a surveyed site",
+    "Stair, shaft, foundation and lift are schematic and need specialist verification"
+  ],
+  "unresolved_questions": []
+}

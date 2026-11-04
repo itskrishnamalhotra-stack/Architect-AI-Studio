@@ -1,0 +1,195 @@
+import json
+from pathlib import Path
+from copy import deepcopy
+from fastapi.testclient import TestClient
+from architect.models import FloorPlan, DesignConstraints
+from architect.validate import validate_plan, wall_length
+from architect.render import render_svg, render_dxf
+from architect.ai import FLOORPLAN_SCHEMA, generate_plan, AIConfigurationError
+from app import app
+
+ROOT = Path(__file__).resolve().parents[1]
+DATA=json.loads((ROOT/"examples/sample_plan.json").read_text())
+CLIENT=TestClient(app)
+
+
+def model(data=None):return FloorPlan.model_validate(data or DATA)
+
+
+def codes(report):return [i.code for i in report.issues]
+
+
+def test_sample_is_valid_and_zero_warnings():
+    r=validate_plan(model(), DesignConstraints(require_exterior_entrance=True))
+    assert r.valid and r.errors==0 and r.warnings==0, r
+    assert r.level_summaries[0]['gross_area_m2']==135.57
+
+
+def test_geometry_canonical_references():
+    p=model()
+    level=p.levels[0]
+    ids={w.id for w in level.walls}
+    assert all(o.host_wall_id in ids for o in level.openings)
+    assert all(o.offset_mm+o.width_mm<=wall_length(next(w for w in level.walls if w.id==o.host_wall_id)) for o in level.openings)
+
+
+def test_room_overlap_is_error():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['spaces'][0]['polygon'][1]['x']=6500
+    raw['levels'][0]['spaces'][0]['polygon'][2]['x']=6500
+    r=validate_plan(model(raw))
+    assert 'ROOM_OVERLAP' in codes(r)
+    assert not r.valid
+
+
+def test_outside_space_error():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['spaces'][0]['polygon'][0]['x']=-500
+    raw['levels'][0]['spaces'][0]['polygon'][3]['x']=-500
+    r=validate_plan(model(raw))
+    assert 'SPACE_OUTSIDE_FOOTPRINT' in codes(r)
+
+
+def test_duplicate_ids_error():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['objects'][0]['id']='D1'
+    assert 'DUPLICATE_ELEMENT_ID' in codes(validate_plan(model(raw)))
+
+
+def test_unknown_opening_wall_error():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['openings'][0]['host_wall_id']='ghost_wall'
+    assert 'UNKNOWN_HOST_WALL' in codes(validate_plan(model(raw)))
+
+
+def test_outside_wall_opening_and_overlap_errors():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['openings'][0]['offset_mm']=11800
+    raw['levels'][0]['openings'][1]['offset_mm']=1100
+    raw['levels'][0]['openings'][2]['host_wall_id']=raw['levels'][0]['openings'][1]['host_wall_id']
+    raw['levels'][0]['openings'][2]['offset_mm']=1800
+    codes_found=codes(validate_plan(model(raw)))
+    assert 'OPENING_OUTSIDE_WALL' in codes_found
+    assert 'OVERLAPPING_OPENINGS' in codes_found
+
+
+def test_invalid_shape_is_blocked():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['spaces'][0]['polygon']=[{'x':0,'y':0},{'x':5000,'y':4500},{'x':5000,'y':0},{'x':0,'y':4500}]
+    assert 'INVALID_SPACE' in codes(validate_plan(model(raw)))
+
+
+def test_program_count_constraint():
+    r=validate_plan(model(),DesignConstraints(room_needs=[{'kind':'bedroom','count':4}],require_exterior_entrance=True))
+    assert 'ROOM_PROGRAM_COUNT' in codes(r)
+
+
+def test_envelope_constraint():
+    r=validate_plan(model(),DesignConstraints(envelope_width_mm=15000,require_exterior_entrance=True))
+    assert 'ENVELOPE_WIDTH' in codes(r)
+
+
+def test_svg_has_real_wall_cuts_and_3d_data_in_json():
+    svg=render_svg(model())
+    assert 'layer-openings' in svg and 'layer-dimensions' in svg
+    assert 'CONCEPT — NOT FOR CONSTRUCTION' in svg
+    assert 'LIVING / DINING' in svg
+    assert '3050' in model().model_dump_json()
+
+
+def test_multi_level_renders_selected_level():
+    raw=deepcopy(DATA)
+    second=deepcopy(raw['levels'][0]);second['id']='L1';second['name']='First Floor';second['elevation_mm']=3150
+    raw['levels'].append(second)
+    p=model(raw)
+    svg=render_svg(p,'L1')
+    assert 'First Floor' in svg
+
+
+def test_dxf_real_file_and_layers():
+    data=render_dxf(model())
+    assert b'HEADER' in data and b'A-WALL-EXT' in data and b'A-ROOM' in data
+    assert len(data)>10000
+
+
+def test_api_root_and_sample():
+    assert CLIENT.get('/').status_code==200
+    assert CLIENT.get('/api/sample').json()['schema_version']=='1.0.0'
+    assert CLIENT.get('/api/schema').status_code==200
+    assert CLIENT.get('/api/contract').status_code==200
+    assert CLIENT.get('/api/status').json()['ready']
+
+
+def test_api_render_and_export():
+    r=CLIENT.post('/api/render',json={'plan':DATA})
+    assert r.status_code==200,r.text[:600]
+    assert r.json()['rendered']
+    assert 'layer-walls' in r.json()['svg']
+    assert CLIENT.post('/api/export/svg',json={'plan':DATA}).status_code==200
+    assert CLIENT.post('/api/export/dxf',json={'plan':DATA}).status_code==200
+
+
+def test_api_blocks_invalid_data_and_export():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['openings'][0]['host_wall_id']='MISSING'
+    r=CLIENT.post('/api/render',json={'plan':raw})
+    assert r.status_code==200
+    assert not r.json()['rendered']
+    assert CLIENT.post('/api/export/svg',json={'plan':raw}).status_code==422
+
+
+def test_api_rejects_wrong_schema_and_unknown_level():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['objects'][0]['width_mm']=-1
+    r=CLIENT.post('/api/validate',json={'plan':raw})
+    assert r.status_code==422
+    assert r.json()['detail']['code']=='SCHEMA_INVALID'
+    assert CLIENT.post('/api/render',json={'plan':DATA,'level_id':'NONE'}).status_code==400
+
+
+def test_body_size_limit():
+    r=CLIENT.post('/api/validate',content=b' '*2_100_000,headers={'Content-Type':'application/json'})
+    assert r.status_code==413
+
+
+def test_ai_requires_key(monkeypatch):
+    monkeypatch.delenv('GEMINI_API_KEY',raising=False)
+    r=CLIENT.post('/api/generate',json={'brief':'Create a 2 bedroom family apartment with a kitchen and an external door.'})
+    assert r.status_code==503
+    assert 'GEMINI_API_KEY' in r.json()['detail']
+
+
+def test_ai_schema_contains_ref_and_properties():
+    assert 'properties' in FLOORPLAN_SCHEMA
+    assert 'levels' in FLOORPLAN_SCHEMA['properties']
+
+
+def test_v2_svg_drafting_and_symbol_library():
+    svg=render_svg(model())
+    assert 'id="masonry"' in svg and 'id="partitions"' in svg
+    assert 'layer-scalebar' in svg and 'layer-titleblock' in svg
+    assert 'data-opening-id="D1"' in svg and 'data-object-id="master_bed"' in svg
+    assert 'data-room-id="bedroom_a"' in svg
+    assert 'window-frame' in svg and 'door-swing' in svg
+    assert '12 900' in svg and '11 700' in svg
+
+
+def test_v2_door_sweep_fixture_conflicts_are_reported():
+    raw=deepcopy(DATA)
+    # Move the guest WC directly into the opening D8's swing zone.
+    fixture=next(o for o in raw['levels'][0]['objects'] if o['id']=='guest_wc')
+    fixture['center']={'x':5100,'y':8120}
+    assert 'DOOR_SWING_OBJECT_CONFLICT' in codes(validate_plan(model(raw)))
+
+
+def test_v2_missing_bed_is_architectural_warning():
+    raw=deepcopy(DATA)
+    raw['levels'][0]['objects']=[o for o in raw['levels'][0]['objects'] if o['id']!='master_bed']
+    assert 'ROOM_FIXTURE_MISSING' in codes(validate_plan(model(raw)))
+
+
+def test_v2_svg_is_well_formed_xml():
+    from xml.etree import ElementTree as ET
+    root=ET.fromstring(render_svg(model()))
+    assert root.tag.endswith('svg')
+    assert root.attrib['role']=='img'

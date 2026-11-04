@@ -1,0 +1,166 @@
+{
+  "id": "A09",
+  "name": "Six-level compact apartment block",
+  "typology": "apartment",
+  "description": "Two compact residences per level with required vertical circulation.",
+  "request": {
+    "property_type": "apartment",
+    "plot_width_mm": 36000,
+    "plot_depth_mm": 31000,
+    "floors": 6,
+    "units_per_floor": 2,
+    "bedrooms_per_unit": 1,
+    "layout_strategy": "auto",
+    "stairs": "auto",
+    "lift": "required",
+    "garage": "auto",
+    "lawn": "auto",
+    "shaft": "required",
+    "parking_spaces": 0,
+    "accessibility_priority": false,
+    "seed": 893,
+    "alternatives": 1,
+    "concept_margin_mm": 800
+  },
+  "validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 19,
+    "warning_codes": [
+      "FLOOR_NO_EXTERNAL_WINDOW",
+      "LIFT_ENGINEERING_UNVERIFIED"
+    ],
+    "warning_examples": [
+      "'FLAT 1 \u00b7 KITCHEN' has no modeled exterior window/vent; verify daylight and ventilation",
+      "'FLAT 2 \u00b7 LIVING / DINING' has no modeled exterior window/vent; verify daylight and ventilation",
+      "'FLAT 2 \u00b7 KITCHEN' has no modeled exterior window/vent; verify daylight and ventilation",
+      "'FLAT 1 \u00b7 KITCHEN' has no modeled exterior window/vent; verify daylight and ventilation"
+    ],
+    "metrics": {
+      "buildings": 1,
+      "occupied_floors": 6,
+      "unit_floor_occurrences": 12,
+      "site_areas": 1,
+      "independent_units": 12,
+      "gross_plot_area_m2": 1116.0,
+      "building_coverage_percent": 31.5,
+      "site_landscape_area_m2": 0.0,
+      "warnings_requiring_review": 19
+    }
+  },
+  "levels_drawn": [
+    "L0",
+    "L1"
+  ],
+  "units": [
+    [
+      "Flat 1",
+      "residence",
+      "L0"
+    ],
+    [
+      "Flat 2",
+      "residence",
+      "L0"
+    ],
+    [
+      "Flat 1",
+      "residence",
+      "L1"
+    ],
+    [
+      "Flat 2",
+      "residence",
+      "L1"
+    ],
+    [
+      "Flat 1",
+      "residence",
+      "L2"
+    ],
+    [
+      "Flat 2",
+      "residence",
+      "L2"
+    ],
+    [
+      "Flat 1",
+      "residence",
+      "L3"
+    ],
+    [
+      "Flat 2",
+      "residence",
+      "L3"
+    ],
+    [
+      "Flat 1",
+      "residence",
+      "L4"
+    ],
+    [
+      "Flat 2",
+      "residence",
+      "L4"
+    ],
+    [
+      "Flat 1",
+      "residence",
+      "L5"
+    ],
+    [
+      "Flat 2",
+      "residence",
+      "L5"
+    ]
+  ],
+  "site_features": [
+    {
+      "kind": "walkway",
+      "label": "RESIDENTIAL ENTRY PATH"
+    }
+  ],
+  "feature_decisions": [
+    {
+      "name": "stairs",
+      "requested": "auto",
+      "included": true,
+      "reason": "Multiple occupied levels need designed vertical circulation; concept stair is included for multi-storey projects."
+    },
+    {
+      "name": "lift",
+      "requested": "required",
+      "included": true,
+      "reason": "Explicit user requirement"
+    },
+    {
+      "name": "garage",
+      "requested": "auto",
+      "included": false,
+      "reason": "Garage only when explicitly required; outdoor parking is a separate request."
+    },
+    {
+      "name": "lawn",
+      "requested": "auto",
+      "included": false,
+      "reason": "Private landscaping only when explicitly required; no automatic lawn insertion."
+    },
+    {
+      "name": "shaft",
+      "requested": "required",
+      "included": true,
+      "reason": "Explicit user requirement"
+    }
+  ],
+  "score": 48.22,
+  "quality_metrics": {
+    "private_area_m2": 269.1,
+    "common_area_m2": 82.9,
+    "circulation_area_percent": 33.1,
+    "window_count": 5,
+    "habitable_room_count": 8,
+    "bedrooms": 2,
+    "heuristic": "Relative comparison only; no regulatory compliance or aesthetic certification"
+  },
+  "source": "Architect_AI_Studio_V4.zip / architect.property_generator.generate_property and architect.property_render"
+}

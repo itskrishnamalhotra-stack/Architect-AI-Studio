@@ -1,0 +1,22 @@
+{
+  "tested_version": "V4.1 (V4 engine + upgraded interface)",
+  "run_date": "2026-11-04",
+  "command": "python -m pytest tests/test_v4.py tests/test_v3.py -v --durations=10 --junitxml=docs/test-results.xml",
+  "python_version": "3.13.5",
+  "platform": "Linux x86_64",
+  "test_count": 44,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "duration_seconds": 71.33,
+  "status": "passed",
+  "scope": "Python unit, geometry, property and FastAPI tests; not browser/E2E nor certification",
+  "other_checks": {
+    "python_compileall": "passed",
+    "node_check_static_v4_js": "passed",
+    "catalog_pdf_pages": 92,
+    "catalog_scenarios": 35,
+    "catalog_distinct_base_floor_geometries": 26,
+    "catalog_warning_scenarios": 27
+  }
+}

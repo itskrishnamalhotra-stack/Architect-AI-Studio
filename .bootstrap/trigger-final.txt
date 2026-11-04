@@ -1,1 +1,0 @@
-Trigger verified publication excluding workflow creation by GitHub Actions.

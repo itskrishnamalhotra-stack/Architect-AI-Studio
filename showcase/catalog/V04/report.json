@@ -1,0 +1,102 @@
+{
+  "id": "V04",
+  "name": "Irregular living-room villa",
+  "typology": "villa",
+  "description": "Concave living / dining room modeled using room polygons.",
+  "request": {
+    "property_type": "villa",
+    "plot_width_mm": 27000,
+    "plot_depth_mm": 27000,
+    "floors": 1,
+    "units_per_floor": 1,
+    "bedrooms_per_unit": 2,
+    "layout_strategy": "irregular",
+    "stairs": "auto",
+    "lift": "auto",
+    "garage": "auto",
+    "lawn": "auto",
+    "shaft": "auto",
+    "parking_spaces": 0,
+    "accessibility_priority": false,
+    "seed": 190,
+    "alternatives": 1,
+    "concept_margin_mm": 800
+  },
+  "validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 0,
+    "warning_codes": [],
+    "warning_examples": [],
+    "metrics": {
+      "buildings": 1,
+      "occupied_floors": 1,
+      "unit_floor_occurrences": 1,
+      "site_areas": 1,
+      "independent_units": 1,
+      "gross_plot_area_m2": 729.0,
+      "building_coverage_percent": 18.5,
+      "site_landscape_area_m2": 0.0,
+      "warnings_requiring_review": 0
+    }
+  },
+  "levels_drawn": [
+    "L0"
+  ],
+  "units": [
+    [
+      "Private Home",
+      "residence",
+      "L0"
+    ]
+  ],
+  "site_features": [
+    {
+      "kind": "walkway",
+      "label": "RESIDENTIAL ENTRY PATH"
+    }
+  ],
+  "feature_decisions": [
+    {
+      "name": "stairs",
+      "requested": "auto",
+      "included": false,
+      "reason": "Multiple occupied levels need designed vertical circulation; concept stair is included for multi-storey projects."
+    },
+    {
+      "name": "lift",
+      "requested": "auto",
+      "included": false,
+      "reason": "Automatically considered for 4+ floors or stated accessibility priority; not a building-code verdict."
+    },
+    {
+      "name": "garage",
+      "requested": "auto",
+      "included": false,
+      "reason": "Garage only when explicitly required; outdoor parking is a separate request."
+    },
+    {
+      "name": "lawn",
+      "requested": "auto",
+      "included": false,
+      "reason": "Private landscaping only when explicitly required; no automatic lawn insertion."
+    },
+    {
+      "name": "shaft",
+      "requested": "auto",
+      "included": false,
+      "reason": "Dedicated service shaft only when explicitly required; MEP engineering remains unresolved."
+    }
+  ],
+  "score": 82.75,
+  "quality_metrics": {
+    "private_area_m2": 134.6,
+    "common_area_m2": 0.0,
+    "circulation_area_percent": 12.5,
+    "window_count": 4,
+    "habitable_room_count": 4,
+    "bedrooms": 2,
+    "heuristic": "Relative comparison only; no regulatory compliance or aesthetic certification"
+  },
+  "source": "Architect_AI_Studio_V4.zip / architect.property_generator.generate_property and architect.property_render"
+}

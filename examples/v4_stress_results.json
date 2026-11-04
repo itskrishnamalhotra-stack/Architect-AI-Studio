@@ -1,0 +1,147 @@
+{
+  "sample_count": 14,
+  "all_passed_implemented_checks": true,
+  "cases": [
+    {
+      "case": 1,
+      "property_type": "villa",
+      "errors": 0,
+      "warnings": 0,
+      "buildings": 1,
+      "units": 1,
+      "seconds": 0.48,
+      "error_codes": []
+    },
+    {
+      "case": 2,
+      "property_type": "villa",
+      "errors": 0,
+      "warnings": 0,
+      "buildings": 1,
+      "units": 1,
+      "seconds": 0.86,
+      "error_codes": []
+    },
+    {
+      "case": 3,
+      "property_type": "villa",
+      "errors": 0,
+      "warnings": 0,
+      "buildings": 1,
+      "units": 1,
+      "seconds": 0.86,
+      "error_codes": []
+    },
+    {
+      "case": 4,
+      "property_type": "villa",
+      "errors": 0,
+      "warnings": 0,
+      "buildings": 1,
+      "units": 1,
+      "seconds": 0.87,
+      "error_codes": []
+    },
+    {
+      "case": 5,
+      "property_type": "villa",
+      "errors": 0,
+      "warnings": 0,
+      "buildings": 1,
+      "units": 1,
+      "seconds": 1.41,
+      "error_codes": []
+    },
+    {
+      "case": 6,
+      "property_type": "villa",
+      "errors": 0,
+      "warnings": 0,
+      "buildings": 1,
+      "units": 1,
+      "seconds": 1.63,
+      "error_codes": []
+    },
+    {
+      "case": 7,
+      "property_type": "apartment",
+      "errors": 0,
+      "warnings": 3,
+      "buildings": 1,
+      "units": 2,
+      "seconds": 1.23,
+      "error_codes": []
+    },
+    {
+      "case": 8,
+      "property_type": "apartment",
+      "errors": 0,
+      "warnings": 3,
+      "buildings": 1,
+      "units": 2,
+      "seconds": 1.6,
+      "error_codes": []
+    },
+    {
+      "case": 9,
+      "property_type": "apartment",
+      "errors": 0,
+      "warnings": 2,
+      "buildings": 1,
+      "units": 2,
+      "seconds": 2.67,
+      "error_codes": []
+    },
+    {
+      "case": 10,
+      "property_type": "apartment",
+      "errors": 0,
+      "warnings": 5,
+      "buildings": 1,
+      "units": 3,
+      "seconds": 2.22,
+      "error_codes": []
+    },
+    {
+      "case": 11,
+      "property_type": "duplex",
+      "errors": 0,
+      "warnings": 2,
+      "buildings": 1,
+      "units": 1,
+      "seconds": 0.74,
+      "error_codes": []
+    },
+    {
+      "case": 12,
+      "property_type": "mixed_use",
+      "errors": 0,
+      "warnings": 4,
+      "buildings": 1,
+      "units": 4,
+      "seconds": 1.47,
+      "error_codes": []
+    },
+    {
+      "case": 13,
+      "property_type": "apartment",
+      "errors": 0,
+      "warnings": 10,
+      "buildings": 1,
+      "units": 6,
+      "seconds": 1.69,
+      "error_codes": []
+    },
+    {
+      "case": 14,
+      "property_type": "villa",
+      "errors": 0,
+      "warnings": 1,
+      "buildings": 2,
+      "units": 1,
+      "seconds": 0.66,
+      "error_codes": []
+    }
+  ],
+  "note": "Passing algorithmic checks does not imply beautiful or legally buildable designs."
+}

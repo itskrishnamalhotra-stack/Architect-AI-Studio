@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3000.0 -3000.0 33000.0 37900.0" width="1400" height="1608" role="img" aria-label="Architectural landscape and site concept drawing"><defs><style>
+    text{font-family:Arial,Helvetica,sans-serif}.canvas{fill:#fbfcfa}
+    .plot{fill:#fbfbf7;stroke:#333f46;stroke-width:90}
+    .street{fill:#e8ebef;stroke:#aab5bf;stroke-width:24}
+    .building{fill:#e3ebf1;stroke:#263d4e;stroke-width:95;stroke-linejoin:round}
+    .building-inner{fill:none;stroke:#fff;stroke-width:85;stroke-linejoin:round}
+    .green{fill:#d8eace;stroke:#7f9e71;stroke-width:35}
+    .drive{fill:#e5e7e6;stroke:#92999b;stroke-width:35}
+    .park{fill:#f5f5f2;stroke:#b7a79b;stroke-width:30}
+    .walk{fill:#e8ddcd;stroke:#b9a991;stroke-width:30}
+    .gate{fill:#fff;stroke:#315e71;stroke-width:45}
+    .title{fill:#163245;font-weight:700;font-size:450px;letter-spacing:10px}
+    .sub{fill:#5a7380;font-size:240px;letter-spacing:8px}
+    .name{fill:#163245;font-weight:700;font-size:220px;text-anchor:middle}
+    .label{fill:#466978;font-size:165px;text-anchor:middle}
+    .small{fill:#42616d;font-size:160px}.dim{fill:#2a7092;font-size:175px}
+    .line{stroke:#6c8da0;stroke-width:22;fill:none}
+    .trees{fill:#b3d5a7;stroke:#6a9971;stroke-width:31}
+    .car{fill:#eff6fa;stroke:#47788a;stroke-width:40}
+    .roadmark{stroke:#fff;stroke-width:70;stroke-dasharray:450 380;fill:none}
+    </style><pattern id="rooflines" patternUnits="userSpaceOnUse" width="340" height="340" patternTransform="rotate(35)"><path d="M 0 0 L 0 340" stroke="#b6c8d2" stroke-width="45" /></pattern></defs><rect x="-3000.0" y="-3000.0" width="33000.0" height="37900.0" class="canvas" /><rect x="-2920.0" y="27210.0" width="32840.0" height="1200" class="street" /><line x1="-2850.0" y1="27790.0" x2="29850.0" y2="27790.0" class="roadmark" /><text x="13500.00" y="28200.00" class="sub" text-anchor="middle">ROAD FRONTAGE  /  SOUTH</text><polygon points="0.00,0.00 27000.00,0.00 27000.00,27000.00 0.00,27000.00" class="plot" /><polygon points="3740.00,26880.00 3740.00,13920.00 2680.00,13920.00 2680.00,26880.00" class="walk" id="site_pedestrian_path" /><text x="3210.00" y="20400.00" class="label">RESIDENTIAL ENTRY PATH</text><polygon points="1200.00,1600.00 12800.00,1600.00 12800.00,13200.00 1200.00,13200.00" class="building" /><polygon points="1200.00,1600.00 12800.00,1600.00 12800.00,13200.00 1200.00,13200.00" fill="url(#rooflines)" stroke="none" /><polygon points="1200.00,1600.00 12800.00,1600.00 12800.00,13200.00 1200.00,13200.00" class="building-inner" /><text x="7000.00" y="7150.00" class="name">MAIN BUILDING</text><text x="7000.00" y="7510.00" class="label">1 LEVEL(S)  ·  1 UNIT(S)</text><line x1="0.0" y1="0.0" x2="0.0" y2="-990.0" class="line" /><line x1="27000.0" y1="0.0" x2="27000.0" y2="-990.0" class="line" /><line x1="0.0" y1="-850.0" x2="27000.0" y2="-850.0" class="line" /><text x="13500.00" y="-1040.00" class="dim" text-anchor="middle">27,000 mm  /  27.0 m</text><line x1="0.0" y1="0.0" x2="-1040.0" y2="0.0" class="line" /><line x1="0.0" y1="27000.0" x2="-1040.0" y2="27000.0" class="line" /><line x1="-950.0" y1="0.0" x2="-950.0" y2="27000.0" class="line" /><text x="-1120.00" y="13500.00" class="dim" text-anchor="middle" transform="rotate(-90 -1120.0 13500.0)">27.0 m</text><path d="M 28450.0 380.0 l -230 700 l 230 -140 l 230 140 Z" fill="#285b72" /><text x="28450.00" y="160.00" class="title" text-anchor="middle">N</text><line x1="0.0" y1="28640.0" x2="27000.0" y2="28640.0" stroke="#617989" stroke-width="35" /><text x="0.00" y="29060.00" class="title">PROPERTY MASTER PLAN  /  V4</text><text x="0.00" y="29540.00" class="sub">VILLA  |  PLOT 27.0 × 27.0 m  |  CONCEPT SCHEME</text><text x="0.00" y="30010.00" class="sub">Architectural feasibility illustration · Site geometry in millimetres</text><text x="0.00" y="30340.00" class="small">NOT A SURVEY · NOT REGULATORY/STRUCTURAL APPROVAL · NOT FOR CONSTRUCTION</text></svg>

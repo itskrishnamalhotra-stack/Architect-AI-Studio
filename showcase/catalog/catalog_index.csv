@@ -1,0 +1,36 @@
+ID,Name,Typology,Floor count,Units per floor,Bedrooms per unit,Plot width (m),Plot depth (m),Warnings,Unique warning codes,PDF overview page
+V01,Compact one-bedroom villa,villa,1,1,1,21.0,24.0,0,,6
+V02,Two-bedroom side-wing villa,villa,1,1,2,24.5,27.0,0,,8
+V03,Two-bedroom linear home,villa,1,1,2,23.0,25.5,0,,10
+V04,Irregular living-room villa,villa,1,1,2,27.0,27.0,0,,12
+V05,Three-bedroom family villa,villa,1,1,3,28.5,28.5,0,,14
+V06,Four-bedroom family villa,villa,1,1,4,32.0,29.0,0,,16
+V07,Villa with enclosed garage and lawn,villa,1,1,2,27.5,31.0,1,VEHICLE_TRACK_UNVERIFIED,18
+V08,Garden-edge villa,villa,1,1,2,28.0,31.0,0,,20
+V09,Villa with open surface parking,villa,1,1,3,35.5,34.5,1,VEHICLE_TRACK_UNVERIFIED,22
+V10,Two-storey private residence,villa,2,1,2,31.5,30.0,2,FLOOR_NO_EXTERNAL_WINDOW,24
+V11,Four-storey residence with lift,villa,4,1,2,31.5,30.0,5,FLOOR_NO_EXTERNAL_WINDOW;LIFT_ENGINEERING_UNVERIFIED,26
+D01,Classic two-level duplex,duplex,2,1,2,32.0,30.0,2,FLOOR_NO_EXTERNAL_WINDOW,30
+D02,Three-bedroom duplex,duplex,2,1,3,32.5,30.0,2,FLOOR_NO_EXTERNAL_WINDOW,33
+D03,Duplex with elevator and riser,duplex,3,1,2,34.0,32.0,7,FLOOR_BED_SINGLE_SIDE_ACCESS;FLOOR_NO_EXTERNAL_WINDOW;LIFT_ENGINEERING_UNVERIFIED,35
+A01,One-bedroom single apartment,apartment,1,1,1,21.0,24.0,0,,39
+A02,Two one-bedroom flats / level,apartment,1,2,1,33.5,28.0,3,FLOOR_NO_EXTERNAL_WINDOW,41
+A03,Two two-bedroom flats / level,apartment,2,2,2,35.5,29.0,6,FLOOR_NO_EXTERNAL_WINDOW,43
+A04,Opposed flats and central corridor,apartment,2,2,2,24.5,34.5,4,FLOOR_NO_EXTERNAL_WINDOW,45
+A05,Three-bedroom opposing flats,apartment,2,2,3,27.5,35.5,4,FLOOR_NO_EXTERNAL_WINDOW,47
+A06,Three homes per level,apartment,2,3,2,49.5,29.0,10,FLOOR_NO_EXTERNAL_WINDOW,49
+A07,Four homes per level,apartment,2,4,2,64.0,29.5,14,FLOOR_NO_EXTERNAL_WINDOW,51
+A08,Four-level apartment block / lift,apartment,4,2,2,39.0,30.5,13,FLOOR_NO_EXTERNAL_WINDOW;LIFT_ENGINEERING_UNVERIFIED,53
+A09,Six-level compact apartment block,apartment,6,2,1,36.0,31.0,19,FLOOR_NO_EXTERNAL_WINDOW;LIFT_ENGINEERING_UNVERIFIED,56
+A10,Wing-based two-flat apartment,apartment,2,2,2,38.0,29.0,10,FLOOR_NO_EXTERNAL_WINDOW,59
+A11,Irregular two-flat apartment,apartment,2,2,2,38.0,30.0,6,FLOOR_NO_EXTERNAL_WINDOW,61
+A12,Lift-priority apartment concept,apartment,3,2,2,39.5,31.5,10,FLOOR_NO_EXTERNAL_WINDOW;LIFT_ENGINEERING_UNVERIFIED,63
+A13,Three-family mid-rise block,apartment,4,3,2,56.5,31.0,21,FLOOR_NO_EXTERNAL_WINDOW;LIFT_ENGINEERING_UNVERIFIED,66
+A14,Open-parking apartment site,apartment,2,2,2,38.0,36.0,7,FLOOR_NO_EXTERNAL_WINDOW;VEHICLE_TRACK_UNVERIFIED,68
+M01,Retail ground + homes above,mixed_use,2,2,2,38.0,29.5,4,FLOOR_NO_EXTERNAL_WINDOW,71
+M02,Two retail units + two residential levels,mixed_use,3,2,2,39.5,30.5,7,FLOOR_NO_EXTERNAL_WINDOW,74
+M03,Opposed mixed-use building,mixed_use,3,2,2,26.0,36.0,4,FLOOR_NO_EXTERNAL_WINDOW,77
+M04,Three-shop mixed-use block,mixed_use,3,3,1,54.0,32.0,12,FLOOR_NO_EXTERNAL_WINDOW,80
+M05,Four-unit retail and residential building,mixed_use,3,4,1,63.0,31.0,17,FLOOR_NO_EXTERNAL_WINDOW,83
+M06,Lift-served mixed-use complex,mixed_use,4,2,2,41.5,31.5,11,FLOOR_NO_EXTERNAL_WINDOW;LIFT_ENGINEERING_UNVERIFIED,86
+M07,Mixed-use with outdoor parking,mixed_use,2,2,2,39.5,38.0,5,FLOOR_NO_EXTERNAL_WINDOW;VEHICLE_TRACK_UNVERIFIED,89

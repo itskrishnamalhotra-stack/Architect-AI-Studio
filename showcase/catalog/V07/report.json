@@ -1,0 +1,118 @@
+{
+  "id": "V07",
+  "name": "Villa with enclosed garage and lawn",
+  "typology": "villa",
+  "description": "Detached one-car garage, vehicular route and outdoor lawn included on request.",
+  "request": {
+    "property_type": "villa",
+    "plot_width_mm": 27500,
+    "plot_depth_mm": 31000,
+    "floors": 1,
+    "units_per_floor": 1,
+    "bedrooms_per_unit": 2,
+    "layout_strategy": "wing",
+    "stairs": "auto",
+    "lift": "auto",
+    "garage": "required",
+    "lawn": "required",
+    "shaft": "auto",
+    "parking_spaces": 1,
+    "accessibility_priority": false,
+    "seed": 301,
+    "alternatives": 1,
+    "concept_margin_mm": 800
+  },
+  "validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 1,
+    "warning_codes": [
+      "VEHICLE_TRACK_UNVERIFIED"
+    ],
+    "warning_examples": [
+      "Vehicle swept paths, turning radii and road approval have not been checked"
+    ],
+    "metrics": {
+      "buildings": 2,
+      "occupied_floors": 2,
+      "unit_floor_occurrences": 1,
+      "site_areas": 4,
+      "independent_units": 1,
+      "gross_plot_area_m2": 852.5,
+      "building_coverage_percent": 18.6,
+      "site_landscape_area_m2": 186.2,
+      "warnings_requiring_review": 1
+    }
+  },
+  "levels_drawn": [
+    "L0"
+  ],
+  "units": [
+    [
+      "Private Home",
+      "residence",
+      "L0"
+    ]
+  ],
+  "site_features": [
+    {
+      "kind": "driveway",
+      "label": "VEHICLE ACCESS"
+    },
+    {
+      "kind": "gate",
+      "label": "VEHICLE GATE"
+    },
+    {
+      "kind": "lawn",
+      "label": "LANDSCAPED LAWN"
+    },
+    {
+      "kind": "walkway",
+      "label": "RESIDENTIAL ENTRY PATH"
+    }
+  ],
+  "feature_decisions": [
+    {
+      "name": "stairs",
+      "requested": "auto",
+      "included": false,
+      "reason": "Multiple occupied levels need designed vertical circulation; concept stair is included for multi-storey projects."
+    },
+    {
+      "name": "lift",
+      "requested": "auto",
+      "included": false,
+      "reason": "Automatically considered for 4+ floors or stated accessibility priority; not a building-code verdict."
+    },
+    {
+      "name": "garage",
+      "requested": "required",
+      "included": true,
+      "reason": "Explicit user requirement"
+    },
+    {
+      "name": "lawn",
+      "requested": "required",
+      "included": true,
+      "reason": "Explicit user requirement"
+    },
+    {
+      "name": "shaft",
+      "requested": "auto",
+      "included": false,
+      "reason": "Dedicated service shaft only when explicitly required; MEP engineering remains unresolved."
+    }
+  ],
+  "score": 81.57,
+  "quality_metrics": {
+    "private_area_m2": 134.6,
+    "common_area_m2": 0.0,
+    "circulation_area_percent": 12.9,
+    "window_count": 4,
+    "habitable_room_count": 4,
+    "bedrooms": 2,
+    "heuristic": "Relative comparison only; no regulatory compliance or aesthetic certification"
+  },
+  "source": "Architect_AI_Studio_V4.zip / architect.property_generator.generate_property and architect.property_render"
+}

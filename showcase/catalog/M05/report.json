@@ -1,0 +1,165 @@
+{
+  "id": "M05",
+  "name": "Four-unit retail and residential building",
+  "typology": "mixed_use",
+  "description": "Four commercial unit records on the ground with four flats on levels above.",
+  "request": {
+    "property_type": "mixed_use",
+    "plot_width_mm": 63000,
+    "plot_depth_mm": 31000,
+    "floors": 3,
+    "units_per_floor": 4,
+    "bedrooms_per_unit": 1,
+    "layout_strategy": "auto",
+    "stairs": "auto",
+    "lift": "auto",
+    "garage": "auto",
+    "lawn": "auto",
+    "shaft": "auto",
+    "parking_spaces": 0,
+    "accessibility_priority": false,
+    "seed": 1263,
+    "alternatives": 1,
+    "concept_margin_mm": 800
+  },
+  "validation": {
+    "valid": true,
+    "errors": 0,
+    "warnings": 17,
+    "warning_codes": [
+      "FLOOR_NO_EXTERNAL_WINDOW"
+    ],
+    "warning_examples": [
+      "'FLAT 2 \u00b7 SHOWROOM' has no modeled exterior window/vent; verify daylight and ventilation",
+      "'FLAT 3 \u00b7 SHOWROOM' has no modeled exterior window/vent; verify daylight and ventilation",
+      "'FLAT 4 \u00b7 SHOWROOM' has no modeled exterior window/vent; verify daylight and ventilation",
+      "'FLAT 1 \u00b7 KITCHEN' has no modeled exterior window/vent; verify daylight and ventilation"
+    ],
+    "metrics": {
+      "buildings": 1,
+      "occupied_floors": 3,
+      "unit_floor_occurrences": 12,
+      "site_areas": 1,
+      "independent_units": 12,
+      "gross_plot_area_m2": 1953.0,
+      "building_coverage_percent": 33.4,
+      "site_landscape_area_m2": 0.0,
+      "warnings_requiring_review": 17
+    }
+  },
+  "levels_drawn": [
+    "L0",
+    "L1"
+  ],
+  "units": [
+    [
+      "Shop 1",
+      "retail",
+      "L0"
+    ],
+    [
+      "Shop 2",
+      "retail",
+      "L0"
+    ],
+    [
+      "Shop 3",
+      "retail",
+      "L0"
+    ],
+    [
+      "Shop 4",
+      "retail",
+      "L0"
+    ],
+    [
+      "Apartment 1",
+      "residence",
+      "L1"
+    ],
+    [
+      "Apartment 2",
+      "residence",
+      "L1"
+    ],
+    [
+      "Apartment 3",
+      "residence",
+      "L1"
+    ],
+    [
+      "Apartment 4",
+      "residence",
+      "L1"
+    ],
+    [
+      "Apartment 1",
+      "residence",
+      "L2"
+    ],
+    [
+      "Apartment 2",
+      "residence",
+      "L2"
+    ],
+    [
+      "Apartment 3",
+      "residence",
+      "L2"
+    ],
+    [
+      "Apartment 4",
+      "residence",
+      "L2"
+    ]
+  ],
+  "site_features": [
+    {
+      "kind": "walkway",
+      "label": "RESIDENTIAL ENTRY PATH"
+    }
+  ],
+  "feature_decisions": [
+    {
+      "name": "stairs",
+      "requested": "auto",
+      "included": true,
+      "reason": "Multiple occupied levels need designed vertical circulation; concept stair is included for multi-storey projects."
+    },
+    {
+      "name": "lift",
+      "requested": "auto",
+      "included": false,
+      "reason": "Automatically considered for 4+ floors or stated accessibility priority; not a building-code verdict."
+    },
+    {
+      "name": "garage",
+      "requested": "auto",
+      "included": false,
+      "reason": "Garage only when explicitly required; outdoor parking is a separate request."
+    },
+    {
+      "name": "lawn",
+      "requested": "auto",
+      "included": false,
+      "reason": "Private landscaping only when explicitly required; no automatic lawn insertion."
+    },
+    {
+      "name": "shaft",
+      "requested": "auto",
+      "included": false,
+      "reason": "Dedicated service shaft only when explicitly required; MEP engineering remains unresolved."
+    }
+  ],
+  "score": 54.24,
+  "quality_metrics": {
+    "private_area_m2": 538.2,
+    "common_area_m2": 114.7,
+    "circulation_area_percent": 27.9,
+    "window_count": 9,
+    "habitable_room_count": 12,
+    "bedrooms": 0,
+    "heuristic": "Relative comparison only; no regulatory compliance or aesthetic certification"
+  },
+  "source": "Architect_AI_Studio_V4.zip / architect.property_generator.generate_property and architect.property_render"
+}

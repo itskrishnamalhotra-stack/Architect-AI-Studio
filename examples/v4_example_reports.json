@@ -1,0 +1,14 @@
+[
+  {
+    "name": "v4_sample_property",
+    "errors": 0,
+    "warnings": 1,
+    "independent_units": 1
+  },
+  {
+    "name": "v4_opposed",
+    "errors": 0,
+    "warnings": 4,
+    "independent_units": 4
+  }
+]

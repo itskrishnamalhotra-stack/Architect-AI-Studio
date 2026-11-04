@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="theme-color" content="#141c25"/>
+<title>Architect AI Studio V3 | Architectural Drawing Engine</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#121a23;color:#dce5ec;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}
+button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}a{color:#a4cced}
+header{height:67px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:#17212d;border-bottom:1px solid #30404e;gap:12px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:750;letter-spacing:.02em;color:#f4f8fa}.logo-mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid #5ba4c6;border-radius:9px;background:#244152;color:#b9e7f3;font-size:21px}.muted{font-size:12px;color:#8fa4b4}.beta{border:1px solid #435463;border-radius:6px;padding:3px 6px;font-size:10px;letter-spacing:.12em;color:#9eb3bf}
+.head-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.btn{background:#253544;color:#e6f0f4;border:1px solid #435566;border-radius:9px;padding:10px 13px;font-size:12px;font-weight:650;transition:.15s}.btn:hover{background:#31495b}.btn.primary{color:#0b202b;background:#9fd3df;border-color:#9fd3df}.btn.primary:hover{background:#b9e4ed}.btn.ghost{background:transparent}.btn.tiny{padding:6px 9px;font-size:11px}
+.workspace{height:calc(100dvh - 67px);min-height:620px;display:grid;grid-template-columns:335px minmax(0,1fr) 310px;overflow:hidden}.side{background:#19242f;overflow:auto;padding:18px;border-right:1px solid #30404e}.side.right{background:#18232d;border-right:0;border-left:1px solid #30404e}.section{border-bottom:1px solid #30404e;padding-bottom:20px;margin-bottom:20px}.section:last-child{border:0}
+.overline{color:#8bbbcf;font-size:10px;text-transform:uppercase;letter-spacing:.17em;font-weight:750;margin-bottom:11px}.title{font-size:18px;letter-spacing:-.025em;font-weight:700;color:#f3f8fa;margin:0 0 8px}.subtitle{font-size:12px;line-height:1.6;color:#9cafbb;margin:0 0 15px}
+label.field-label{display:block;color:#c5d6df;font-size:11px;font-weight:650;margin-bottom:6px}textarea,input,select{width:100%;border-radius:8px;background:#101b25;border:1px solid #394c5b;color:#e9f3f5;outline:none;padding:10px 11px}textarea:focus,input:focus,select:focus{border-color:#92cedf;box-shadow:0 0 0 2px #93c8da17}textarea{resize:vertical;min-height:116px;font-size:12px;line-height:1.5}input{font-size:12px}input[type=checkbox]{width:auto;accent-color:#8bced8}.row2{display:grid;grid-template-columns:1fr 1fr;gap:11px}.field{margin:11px 0}.field-hint{font-size:10px;color:#8a9fad;margin-top:5px}.label-inline{display:flex;align-items:center;gap:8px;color:#b3c7d1;font-size:11px;margin:13px 0}.row{display:flex;align-items:center;justify-content:space-between;gap:7px}.row.left{justify-content:flex-start}.code{font-family:ui-monospace,Menlo,Consolas,monospace}
+.viewer{display:flex;min-width:0;flex-direction:column;background:#e4e8ea}.viewer-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#f8fafb;border-bottom:1px solid #cfd8de;color:#304454;padding:12px 15px;flex-wrap:wrap}.toolbar-set{display:flex;align-items:center;gap:7px}.viewer-title{font-weight:700;font-size:12px}.viewer-note{color:#708390;font-size:11px}.toolbtn{border:1px solid #d0dce3;color:#30495a;background:#fff;border-radius:7px;padding:7px 10px;font-size:12px;font-weight:650}.toolbtn:hover{background:#edf4f7}.stage{position:relative;flex:1;overflow:hidden;background-color:#dfe4e7;background-image:radial-gradient(#c3ccd1 0.75px,transparent 0.75px);background-size:17px 17px;display:flex;align-items:center;justify-content:center;padding:25px}.stage svg{max-width:100%;max-height:100%;width:auto;height:auto;filter:drop-shadow(0px 10px 26px #152a3840);background:#fff;touch-action:none;cursor:grab}.stage svg.dragging{cursor:grabbing}.empty{max-width:380px;color:#576f7e;text-align:center}.empty h2{font-size:24px;color:#2c4352;margin:12px 0 6px}.empty p{line-height:1.65;font-size:13px}.square{border:1px solid #91a4ae;border-radius:20px;display:inline-grid;place-items:center;width:56px;height:56px;font-size:28px}.bottom-strip{background:#f8fafb;border-top:1px solid #d1dbe1;padding:9px 17px;font-size:11px;color:#68808d;display:flex;justify-content:space-between;gap:14px}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.stat{background:#111e28;border:1px solid #344653;border-radius:10px;padding:12px}.stat .value{color:#f2f9fb;font-size:21px;font-weight:700;letter-spacing:-.025em}.stat .name{color:#92a6b5;font-size:10px;margin-top:5px;text-transform:uppercase;letter-spacing:.065em}.issue{border-left:3px solid #c4a65c;background:#242c32;padding:10px;border-radius:0 7px 7px 0;margin:8px 0}.issue.error{border-color:#e48984}.issue.info{border-color:#73b8cb}.issue .name{font-size:11px;font-weight:700;color:#e5eaed;margin-bottom:5px}.issue .desc{font-size:11px;color:#b3c2c8;line-height:1.5;overflow-wrap:anywhere}.scroll-issues{max-height:290px;overflow:auto}.space{display:flex;align-items:center;justify-content:space-between;padding:9px 2px;border-bottom:1px solid #34404a;font-size:11px;gap:12px}.space .label{color:#c7d6dc}.space .area{color:#a0b8c1;font-variant-numeric:tabular-nums}.notice{padding:10px 12px;border-radius:8px;background:#122b36;border:1px solid #3c7486;color:#bed7dc;font-size:11px;line-height:1.5;margin:8px 0}.error-msg{background:#36252a;border-color:#a15e68;color:#f5b7c0}.pills{display:flex;gap:6px;flex-wrap:wrap}.pill{background:#233442;color:#b4cbd6;border:1px solid #3a5869;padding:5px 8px;border-radius:16px;font-size:10px}.toggle{font-size:11px;color:#738b9b;display:inline-flex;align-items:center;gap:4px}.toggle input{width:auto}
+#jsonEditor{min-height:240px;max-height:490px;font-size:11px;font-family:ui-monospace,Consolas,monospace;white-space:pre;tab-size:2}.hidden{display:none!important}
+@media(max-width:1220px){.workspace{grid-template-columns:310px minmax(0,1fr)}.side.right{grid-column:1 / -1;border-top:1px solid #30404e;display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px;overflow:visible;height:auto}.side.right .section{margin-bottom:0;border:0}.workspace{height:auto;min-height:calc(100dvh - 67px)}.viewer{height:680px}.side:not(.right){grid-row:1}.side.right{grid-row:2}}
+@media(max-width:780px){header{height:auto;min-height:65px;padding:12px}.head-actions{justify-content:flex-end}.head-actions .btn{padding:7px 8px;font-size:11px}.beta,.muted.head{display:none}.workspace{display:flex;flex-direction:column}.side{overflow:visible;padding:16px}.viewer{height:min(75vh,650px);min-height:460px;order:0}.side:not(.right){order:1}.side.right{order:2;display:block}.stage{padding:8px}.viewer-toolbar{padding:9px}.bottom-strip{font-size:10px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><div class="logo-mark">⌁</div><div>ARCHITECT <span style="font-weight:350;color:#93c6d6">AI</span><div class="muted head" style="font-weight:400;letter-spacing:0">Floor-plan geometry and architectural drafting</div></div><span class="beta">V3 CONSTRAINT ENGINE</span></div>
+  <div class="head-actions"><button class="btn ghost" id="sampleBtn">Open sample</button><button class="btn" id="importBtn">Import JSON</button><input class="hidden" type="file" id="fileInput" accept=".json,application/json"><button class="btn" id="saveBtn">Save JSON</button><button class="btn primary" id="exportBtn">Export SVG</button><button class="btn" id="dxfBtn">DXF</button></div>
+</header>
+<main class="workspace">
+<aside class="side">
+ <div class="section">
+   <div class="overline">01 — Design intelligence</div><h2 class="title">Describe your floor plan</h2>
+   <p class="subtitle">Generate a structured building model. Geometry and architectural issues are checked before a drawing is shown.</p>
+   <label class="field-label" for="brief">Architectural design brief</label>
+   <textarea id="brief">Design a practical and detailed 3-bedroom residence with living and dining areas, kitchen, 2 bathrooms, a guest WC, accessible circulation, an external entrance, furniture, wardrobes, sanitary fixtures, doors and exterior windows. All elements should use real millimetre coordinates.</textarea>
+   <div class="row2"><div class="field"><label class="field-label" for="width">Width (metres)</label><input type="number" id="width" min="2" max="200" step="0.1" value="12.9"></div><div class="field"><label class="field-label" for="depth">Depth (metres)</label><input type="number" id="depth" min="2" max="200" step="0.1" value="11.7"></div></div>
+   <div class="row2"><div class="field"><label class="field-label" for="bedrooms">Bedrooms (minimum)</label><input type="number" id="bedrooms" min="0" max="40" step="1" value="3"></div><div class="field"><label class="field-label" for="bathrooms">Bathrooms (minimum)</label><input type="number" id="bathrooms" min="0" max="40" step="1" value="2"></div></div>
+   <div class="field"><label class="field-label" for="model">Gemini model (optional)</label><input id="model" placeholder="gemini-2.5-flash"><div class="field-hint">Set GEMINI_API_KEY on the server. Pro models may be used if supported by your account.</div></div>
+   <label class="label-inline"><input type="checkbox" id="review" checked>Independent AI design review</label>
+   <button class="btn primary" id="generateBtn" style="width:100%;padding:12px">✧ Generate + validate design</button>
+   <div class="notice" id="aiStatus">Checking AI configuration…</div>
+ </div>
+ <div class="section">
+   <div class="overline">02 — Offline variations / repair</div>
+   <h2 class="title">Generate different floor plans</h2>
+   <p class="subtitle">Create measured, reproducible demonstration variations without an AI key. Set bedroom count, width and depth in the fields above. This is a constrained family of examples, not a universal optimizer.</p>
+   <div class="row2"><div class="field"><label class="field-label" for="scenario">Layout topology</label><select id="scenario"><option value="standard">Standard</option><option value="irregular">Irregular / L-shaped</option><option value="with_core">Stairs + lift + shaft</option></select></div><div class="field"><label class="field-label" for="seedInput">Variation seed</label><input id="seedInput" type="number" min="0" max="1000000" step="1" value="42"></div></div>
+   <div class="field"><label class="field-label" for="floorsInput">Floors (with connected stair/lift cores)</label><input id="floorsInput" type="number" min="1" max="3" value="1" step="1"></div>
+   <button class="btn primary" id="templateBtn" style="width:100%;padding:12px">Generate new verified variation</button>
+   <button class="btn" id="reflowBtn" style="width:100%;margin-top:8px">Suggest bedroom furniture repair</button>
+   <div class="field-hint">If a plan violates the implemented constraints, export is blocked. A repair only replaces the working model when the error count improves.</div>
+ </div>
+ <div class="section">
+   <div class="overline">03 — Model editor</div><h2 class="title">Structured floor-plan JSON</h2><p class="subtitle">Edit the canonical blueprint directly. Every element has a type, stable ID, real dimensions, and optional 3D-ready properties.</p>
+   <div class="row" style="margin-bottom:9px"><button id="applyBtn" class="btn tiny primary">Apply JSON edits</button><button id="formatBtn" class="btn tiny">Format</button><span class="muted" id="jsonSize">—</span></div>
+   <textarea spellcheck="false" id="jsonEditor" placeholder="The building model will appear here…"></textarea>
+ </div>
+ <div class="section"><div class="overline">04 — Blueprint contract</div><p class="subtitle" style="margin-bottom:9px">The guide defines how an AI is expected to plan and serialize an architectural concept.</p><div class="row left"><a href="/api/contract" target="_blank">Blueprint guideline ↗</a><a style="margin-left:12px" href="/api/schema" target="_blank">Full JSON Schema ↗</a></div></div>
+</aside>
+<section class="viewer">
+  <div class="viewer-toolbar"><div><div class="viewer-title" id="planTitle">Concept drawing preview</div><div class="viewer-note" id="planSubtitle">All measurements in millimetres</div></div><div class="toolbar-set"><select id="levelSelect" style="width:auto;background:#fff;border:1px solid #cbd8df;color:#334b59;padding:6px 8px;max-width:150px"></select><button class="toolbtn" id="zoomOut" title="Zoom out">−</button><button class="toolbtn" id="zoomIn" title="Zoom in">+</button><button class="toolbtn" id="resetZoom">Fit</button></div></div>
+  <div class="stage" id="stage"><div class="empty" id="placeholder"><div class="square">⌂</div><h2>Architectural drawing engine</h2><p>Open the sample to explore a dimensioned, editable 2D plan, or generate a new one with your own Gemini API key.</p></div></div>
+  <div class="bottom-strip"><div class="toolbar-set"><label class="toggle"><input checked type="checkbox" data-layer="layer-walls">Walls</label><label class="toggle"><input checked type="checkbox" data-layer="layer-openings">Doors/Windows</label><label class="toggle"><input checked type="checkbox" data-layer="layer-spaces">Rooms</label><label class="toggle"><input checked type="checkbox" data-layer="layer-structure">Columns / cores</label><label class="toggle"><input checked type="checkbox" data-layer="layer-objects">Furniture</label><label class="toggle"><input checked type="checkbox" data-layer="layer-dimensions">Dimensions</label><label class="toggle"><input checked type="checkbox" data-layer="layer-labels">Names</label></div><div id="renderState">Awaiting plan</div></div>
+</section>
+<aside class="side right">
+ <section class="section"><div class="overline">Model health</div><h2 class="title">Validation</h2><div class="stats"><div class="stat"><div class="value" id="errors">—</div><div class="name">Errors</div></div><div class="stat"><div class="value" id="warnings">—</div><div class="name">Warnings</div></div></div><div class="scroll-issues" id="issues"><div class="notice">No model loaded yet.</div></div></section>
+ <section class="section"><div class="overline">Element inspector</div><h2 class="title">Inspect drawing objects</h2><p class="subtitle">Tap a wall, room, column, shaft, stair, lift, furniture item or door/window in the plan. The inspector reads its exact source JSON—not the SVG shape.</p><div id="inspectResult" class="notice">Select an element in the 2D drawing.</div></section>
+ <section class="section"><div class="overline">Area analysis</div><div class="stats"><div class="stat"><div class="value" id="grossArea">—</div><div class="name">Gross m²</div></div><div class="stat"><div class="value" id="countSpaces">—</div><div class="name">Spaces</div></div></div><div id="spaces"></div></section>
+ <section class="section"><div class="overline">Independent design review</div><div class="subtitle" id="quality">AI review appears after successful generation. The geometric validator does not certify building-code or structural compliance.</div><div class="overline" style="margin-top:20px">Future BIM / 3D readiness</div><div class="pills"><span class="pill">Z elevations</span><span class="pill">Materials</span><span class="pill">Textures</span><span class="pill">Door heights</span><span class="pill">Object dimensions</span><span class="pill">Asset references</span><span class="pill">Multi-floor</span></div></section>
+</aside>
+</main>
+<script>
+'use strict';
+let currentPlan=null,lastSVG='',report=null,activeConstraints=null,busy=false;
+const $=id=>document.getElementById(id);
+const stage=$('stage');
+const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function setBusy(state){busy=state;$('generateBtn').disabled=state;$('applyBtn').disabled=state;$('generateBtn').textContent=state?'Generating / reviewing…':'✧ Generate + validate design';}
+function say(msg,error=false){const el=$('aiStatus');el.textContent=msg;el.className='notice'+(error?' error-msg':'');}
+async function request(url,body){const res=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});if(!res.ok){let info;try{info=await res.json()}catch{info={detail:await res.text()}}let detail=info.detail||info;let msg=typeof detail==='string'?detail:(detail.message||JSON.stringify(detail));throw new Error('HTTP '+res.status+': '+msg.slice(0,1100));}return res;}
+function constraintsFromForm(){
+ const width=Number($('width').value),depth=Number($('depth').value),bed=Number($('bedrooms').value),bath=Number($('bathrooms').value);
+ if(!Number.isFinite(width)||width<2||!Number.isFinite(depth)||depth<2)throw Error('Enter positive width and depth (at least 2m).');
+ if(!Number.isInteger(bed)||bed<0||!Number.isInteger(bath)||bath<0)throw Error('Room counts must be nonnegative integers.');
+ const needs=[];if(bed)needs.push({kind:'bedroom',count:bed});if(bath)needs.push({kind:'bathroom',count:bath});
+ return {envelope_width_mm:Math.round(width*1000),envelope_depth_mm:Math.round(depth*1000),room_needs:needs,require_exterior_entrance:true,require_wall_boundary_coverage:true};
+}
+async function getStatus(){try{const r=await fetch('/api/status');const s=await r.json();say(s.ai_configured?'AI ready • '+s.default_model+' • API key is kept on the server.':'AI generation requires GEMINI_API_KEY on the server. Sample, JSON editing and exports are available now.');}catch(e){say('Cannot reach the application server: '+e.message,true)}}
+async function loadSample(){try{const r=await fetch('/api/sample');const p=await r.json();activeConstraints=null;setPlan(p);$('quality').textContent='Illustrative sample. Not a reviewed or approved real building design.';say('Sample loaded. All dimensions and symbols come from the canonical JSON model.');}catch(e){say(e.message,true)}}
+function setPlan(plan){currentPlan=plan;$('jsonEditor').value=JSON.stringify(plan,null,2);$('jsonSize').textContent=(Math.round($('jsonEditor').value.length/1024))+' KB';const select=$('levelSelect');select.replaceChildren();(plan.levels||[]).forEach(l=>{let opt=document.createElement('option');opt.value=l.id;opt.textContent=l.name;select.append(opt)});refresh();}
+function displayReport(r){report=r;$('errors').textContent=r.errors;$('warnings').textContent=r.warnings;const issues=$('issues');issues.replaceChildren();
+ if(!r.issues.length){const el=document.createElement('div');el.className='notice';el.textContent='No geometric or programmatic issues detected by the implemented checks. This is not legal, structural, or professional approval.';issues.append(el)}
+ for(const item of r.issues.slice(0,45)){const el=document.createElement('div');el.className='issue '+item.severity;const name=document.createElement('div');name.className='name';name.textContent=item.severity.toUpperCase()+' • '+item.code;const desc=document.createElement('div');desc.className='desc';desc.textContent=item.message+(item.path?' ['+item.path+']':'');el.append(name,desc);issues.append(el)}
+ const s=(r.level_summaries||[]).find(x=>x.id===$('levelSelect').value)||r.level_summaries?.[0];
+ $('grossArea').textContent=s?s.gross_area_m2:'—';$('countSpaces').textContent=s?s.spaces:'—';$('spaces').replaceChildren();if(s)for(const [name,area] of Object.entries(s.room_areas_m2||{})){const e=document.createElement('div');e.className='space';const a=document.createElement('span');a.className='label';a.textContent=name;const b=document.createElement('span');b.className='area';b.textContent=area+' m²';e.append(a,b);$('spaces').append(e)}
+}
+async function refresh(){if(!currentPlan)return;try{const res=await request('/api/render',{plan:currentPlan,constraints:activeConstraints,level_id:$('levelSelect').value||undefined});const data=await res.json();displayReport(data.report);lastSVG=data.svg||'';$('planTitle').textContent=currentPlan.project.name;$('planSubtitle').textContent=(currentPlan.levels||[]).find(l=>l.id===$('levelSelect').value)?.name||'Floor plan';
+ stage.replaceChildren();$('inspectResult').textContent='Select an element in the 2D drawing.';if(data.svg){const doc=new DOMParser().parseFromString(data.svg,'image/svg+xml');if(doc.querySelector('parsererror'))throw Error('SVG parser rejected rendered plan');const svg=document.importNode(doc.documentElement,true);stage.append(svg);attachViewer(svg);applyLayers();$('renderState').textContent='Passed implemented checks • Zoom/pan';}else{const placeholder=document.createElement('div');placeholder.className='empty';placeholder.innerHTML='<div class="square">!</div><h2>Validation blocked rendering</h2><p>Correct the errors shown in the right panel and apply the JSON again.</p>';stage.append(placeholder);$('renderState').textContent='Blocked • '+data.report.errors+' error(s)'}}catch(e){say('Render failed: '+e.message,true)}}
+function applyLayers(){const svg=stage.querySelector('svg');if(!svg)return;document.querySelectorAll('[data-layer]').forEach(input=>{const node=svg.querySelector('#'+input.dataset.layer);if(node)node.style.display=input.checked?'':'none'})}
+function zoomSvg(scale,centerX=null,centerY=null){const svg=stage.querySelector('svg');if(!svg)return;const box=svg.viewBox.baseVal,rect=svg.getBoundingClientRect();const px=centerX === null ? 0.5 : (centerX-rect.left)/rect.width,py=centerY === null ? 0.5 : (centerY-rect.top)/rect.height;
+const width=Math.max(200,Math.min(1000000,box.width*scale)),height=box.height*(width/box.width);box.x+=(box.width-width)*px;box.y+=(box.height-height)*py;box.width=width;box.height=height;}
+function attachViewer(svg){const original=svg.getAttribute('viewBox');svg.dataset.original=original;let drag=null;
+ svg.addEventListener('click',inspectDrawingElement);
+ svg.addEventListener('wheel',ev=>{ev.preventDefault();zoomSvg(ev.deltaY<0?.87:1.15,ev.clientX,ev.clientY)},{passive:false});
+ svg.addEventListener('pointerdown',ev=>{if(ev.button!==0)return;inspectDrawingElement(ev);drag={x:ev.clientX,y:ev.clientY};svg.classList.add('dragging');svg.setPointerCapture(ev.pointerId)});
+ svg.addEventListener('pointermove',ev=>{if(!drag)return;const r=svg.getBoundingClientRect(),v=svg.viewBox.baseVal;v.x-=(ev.clientX-drag.x)*v.width/r.width;v.y-=(ev.clientY-drag.y)*v.height/r.height;drag={x:ev.clientX,y:ev.clientY}});
+ svg.addEventListener('pointerup',()=>{drag=null;svg.classList.remove('dragging')});svg.addEventListener('pointercancel',()=>{drag=null;svg.classList.remove('dragging')});
+}
+function inspectDrawingElement(ev){
+ const hit=ev.target.closest('[data-object-id],[data-opening-id],[data-room-id],[data-wall-id],[data-built-id],[data-core-id]');
+ if(!hit||!currentPlan)return;
+ const lv=(currentPlan.levels||[]).find(v=>v.id===$('levelSelect').value)||currentPlan.levels?.[0];
+ if(!lv)return;
+ let obj=null,typ='';
+ if(hit.dataset.objectId){typ='Furniture / fixture';obj=(lv.objects||[]).find(v=>v.id===hit.dataset.objectId)}
+ else if(hit.dataset.openingId){typ='Door / window';obj=(lv.openings||[]).find(v=>v.id===hit.dataset.openingId)}
+ else if(hit.dataset.roomId){typ='Room / space';obj=(lv.spaces||[]).find(v=>v.id===hit.dataset.roomId)}
+ else if(hit.dataset.wallId){typ='Wall';obj=(lv.walls||[]).find(v=>v.id===hit.dataset.wallId)}
+ else if(hit.dataset.builtId){typ='Structural / service element';obj=(lv.built_elements||[]).find(v=>v.id===hit.dataset.builtId)}
+ else if(hit.dataset.coreId){typ='Vertical connector';obj=(lv.vertical_connectors||[]).find(v=>v.id===hit.dataset.coreId)}
+ if(!obj)return;
+ let details='';
+ if(typ==='Room / space'){
+   const pts=obj.polygon||[];let twice=0;
+   for(let i=0;i<pts.length;i++){const a=pts[i],b=pts[(i+1)%pts.length];twice+=a.x*b.y-a.y*b.x}
+   details+='Area: '+(Math.abs(twice)/2/1000000).toFixed(2)+' m²\n';
+ }
+ if(typ==='Wall')details+='Thickness: '+obj.thickness_mm+' mm\nHeight: '+obj.height_mm+' mm\nKind: '+obj.kind+'\n';
+ if(typ==='Door / window')details+='Host wall: '+obj.host_wall_id+'\nWidth: '+obj.width_mm+' mm\nHeight: '+obj.height_mm+' mm\nSill: '+obj.sill_mm+' mm\n';
+ if(typ==='Furniture / fixture')details+='Width × depth × height: '+obj.width_mm+' × '+obj.depth_mm+' × '+obj.height_mm+' mm\nBase Z: '+obj.base_z_mm+' mm\n';
+ const out=$('inspectResult');out.replaceChildren();
+ const head=document.createElement('div');head.style.fontWeight='700';head.textContent=typ+'  ·  '+(obj.name||obj.id);
+ const pre=document.createElement('pre');pre.style.whiteSpace='pre-wrap';pre.style.overflowWrap='anywhere';pre.style.fontSize='11px';pre.style.lineHeight='1.5';pre.style.marginBottom='0';pre.textContent=details+'Source JSON:\n'+JSON.stringify(obj,null,2);
+ out.append(head,pre);
+}
+function download(blob,name){const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download=name;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+async function exportFormat(fmt){if(!currentPlan){say('Load a plan first',true);return;}try{const r=await request('/api/export/'+fmt,{plan:currentPlan,level_id:$('levelSelect').value});const blob=await r.blob();download(blob,'architect-plan.'+fmt)}catch(e){say(e.message,true)}}
+function showQuality(q){if(!q){$('quality').textContent='No AI design review was requested.';return;}const parts=[...(q.critical_findings||[]),...(q.improvements||[])];$('quality').textContent=parts.length?parts.map(x=>'• '+x).join('\n'):'The AI reviewer raised no specific suggestions. This is not certification.';$('quality').style.whiteSpace='pre-line';}
+async function generate(){if(busy)return;setBusy(true);try{const brief=$('brief').value.trim(),constraints=constraintsFromForm();say('AI is creating geometry, followed by checks and bounded repair attempts.');const result=await(await request('/api/generate',{brief,constraints,model:$('model').value.trim()||null,design_review:$('review').checked,max_revisions:2})).json();showQuality(result.quality_review);if(!result.plan){say('The AI output did not satisfy the data schema. '+JSON.stringify(result.schema_errors||[]).slice(0,850),true);return}activeConstraints=constraints;setPlan(result.plan);say(result.status==='valid'?'Generated and validated in '+result.attempts.length+' pass(es). Review all assumptions and unresolved questions.':'AI returned a plan with remaining geometric errors. Inspect JSON and validation findings.',result.status!=='valid');}catch(e){say(e.message,true)}finally{setBusy(false)}}
+async function generateTemplate(){
+ if(busy)return;
+ try{
+   const bed=Number($('bedrooms').value),width=Number($('width').value),depth=Number($('depth').value),seed=Number($('seedInput').value),floors=Number($('floorsInput').value);
+   if(!Number.isInteger(bed)||bed<1||bed>4)throw Error('Offline template supports 1–4 bedrooms. AI generation can use other programs.');
+   const scenario=$('scenario').value;
+   const params={bedrooms:bed,width_mm:Math.round(width*1000),depth_mm:Math.round(depth*1000),seed,irregular_living:scenario==='irregular',include_core:scenario==='with_core',floors};
+   const data=await(await request('/api/template',params)).json();
+   activeConstraints=null;setPlan(data.plan);
+   say('Variation '+seed+' generated. '+data.report.errors+' implemented rule errors, '+data.report.warnings+' warnings. This is a concept, not a code-approved building plan.');
+ }catch(e){say('Template rejected: '+e.message,true)}
+}
+async function suggestRepair(){
+ if(!currentPlan)return say('Load a plan first',true);
+ try{
+  const result=await(await request('/api/repair/bedrooms',{plan:currentPlan,seed:Number($('seedInput').value)})).json();
+  if(result.accepted){activeConstraints=null;setPlan(result.plan);say('Proposed placement revision accepted: '+result.original_report.errors+' → '+result.report.errors+' errors. Changed '+result.changes.filter(x=>x.to).length+' object positions. Review all changed coordinates in the model.');}
+  else say('No improved bedroom arrangement found. The original model was left unchanged. Unresolved problems are not hidden.',true);
+ }catch(e){say('Repair failed: '+e.message,true)}
+}
+$('templateBtn').onclick=generateTemplate;
+$('reflowBtn').onclick=suggestRepair;
+$('sampleBtn').onclick=loadSample;
+$('generateBtn').onclick=generate;
+$('applyBtn').onclick=()=>{try{let p=JSON.parse($('jsonEditor').value);activeConstraints=null;setPlan(p);say('JSON applied. Deterministic geometry checks have been rerun.')}catch(e){say('Invalid JSON: '+e.message,true)}};
+$('formatBtn').onclick=()=>{try{$('jsonEditor').value=JSON.stringify(JSON.parse($('jsonEditor').value),null,2)}catch(e){say('Cannot format invalid JSON: '+e.message,true)}};
+$('saveBtn').onclick=()=>{if(!currentPlan)return say('Load a model first',true);download(new Blob([JSON.stringify(currentPlan,null,2)],{type:'application/json'}),'architect-plan.json')};
+$('importBtn').onclick=()=>$('fileInput').click();
+$('fileInput').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const p=JSON.parse(await file.text());activeConstraints=null;setPlan(p);say('Imported model; validation rerun.')}catch(err){say('Import failed: '+err.message,true)}e.target.value=''};
+$('exportBtn').onclick=()=>exportFormat('svg');$('dxfBtn').onclick=()=>exportFormat('dxf');
+$('levelSelect').onchange=refresh;
+$('zoomIn').onclick=()=>zoomSvg(.8);$('zoomOut').onclick=()=>zoomSvg(1.25);
+$('resetZoom').onclick=()=>{const svg=stage.querySelector('svg');if(svg&&svg.dataset.original)svg.setAttribute('viewBox',svg.dataset.original)};
+document.querySelectorAll('[data-layer]').forEach(el=>el.onchange=applyLayers);
+getStatus();loadSample();
+</script>
+</body>
+</html>
